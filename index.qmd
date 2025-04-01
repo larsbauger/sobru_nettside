@@ -6,4 +6,6 @@ title: "Sosial bærekraft og redusert utenforsskap (SOBRU)"
 
 Dette er en nettside som utvikles for å finne gode måter å formidle arbeidet som gjøres i de forskjellige arbeidspakkene. Man kan navigere til de forskjellige sidene på venstre side. Foreløpig er det ikke mye informasjon her, men det kan komme etterhvert.
 
+En oversikt over hvor mange som kategoriseres som NEET i vår region fordelt på fylkene og kommuner kan man finne på fanen over som heter `NEET i vår region`. Kontaktinformasjon finnes nederst på
+
 Mer informasjon om prosjektet i sin helhet kan man finne på [SOBRU sin USN side](https://www.usn.no/forskning/prosjekter/andre-prosjekter/sosial-baerekraft-og-redusert-utenforskap/).

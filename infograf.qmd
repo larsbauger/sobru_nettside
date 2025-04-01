@@ -1,5 +1,5 @@
 ---
-title: Utforsking av utenforsskap i vår region (SOBRU), basert på data fra SSB
+title: Utforsking av utenforsskap i vår region (NEET), basert på data fra SSB
 author: Lars Bauger 
 format: 
   dashboard:

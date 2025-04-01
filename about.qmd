@@ -3,6 +3,6 @@ title: "Om"
 logo: "img/Usn_sort_png"
 ---
 
-Her er en midlertidig side.
+Det er Lars Bauger som har lagd sidene. Kontaktinfo: lars,bauger\@usn.no
 
 ![](img/tool.jpg){width="338"}
