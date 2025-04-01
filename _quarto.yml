@@ -21,7 +21,8 @@ format:
     css: styles.css
     toc: true
 
-
+body-footer: | 
+  This page brought to you by <https://example.com>
 
 editor: visual
 
