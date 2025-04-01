@@ -2,21 +2,15 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "sobru_nettside",
+    "title": "Sosial bærekraft og redusert utenforsskap (SOBRU)",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "Velkommen\nDette er en nettside som utvikles for å finne gode måter å formidle arbeidet som gjøres i de forskjellige arbeidspakkene. Man kan navigere til de forskjellige sidene på venstre side. Foreløpig er det ikke mye informasjon her, men det kan komme etterhvert.\nMer informasjon om prosjektet i sin helhet kan man finne på SOBRU sin USN side."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Om",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2",
-    "crumbs": [
-      "About"
-    ]
+    "text": "Her er en midlertidig side."
   }
 ]
