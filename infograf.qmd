@@ -1,10 +1,11 @@
 ---
 title: Utforsking av utenforsskap i vår region (SOBRU), basert på data fra SSB
-author: Lars Bauger (leder Arbeidspakke 1)
+author: Lars Bauger 
 format: 
   dashboard:
     orientation: columns
     theme: yeti
+    logo: "img/bamse.jpg"
 ---
 
 ```{r, loading packages}

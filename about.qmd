@@ -1,9 +1,8 @@
 ---
-title: "About"
+title: "Om"
+logo: "img/Usn_sort_png"
 ---
 
-About this site
+Her er en midlertidig side.
 
-```{r}
-1 + 1
-```
+![](img/tool.jpg){width="338"}
