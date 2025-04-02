@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Lars Bauger">
 
-<title>Sosial bærekraft og redusert utenforsskap (SOBRU) – SOBRU</title>
+<title>Utforsking av utenforsskap i vår region (NEET), basert på data fra SSB – SOBRU</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -38,7 +39,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8647a4a42273f773479d27c00df3f9ed.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-5e113afdac1e418f162bce274ee92ddb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-dashboard/quarto-dashboard.js"></script>
+<script src="site_libs/quarto-dashboard/stickythead.js"></script>
+<script src="site_libs/quarto-dashboard/datatables.min.js" kdttablesentinel="true"></script>
+<script src="site_libs/quarto-dashboard/pdfmake.min.js" kdttablesentinel="true"></script>
+<script src="site_libs/quarto-dashboard/vfs_fonts.js" kdttablesentinel="true"></script>
+<script src="site_libs/quarto-dashboard/web-components.js" type="module"></script>
+<script src="site_libs/quarto-dashboard/components.js"></script>
+<link href="site_libs/quarto-dashboard/datatables.min.css" rel="stylesheet" kdttablesentinel="true">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -66,12 +75,21 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.10.4/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 
 
-<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="quarto-dashboard nav-fixed dashboard-fill fullcontent">
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -92,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Hjem</span></a>
   </li>  
   <li class="nav-item">
@@ -104,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">NEET i vår region</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./info2.html"> 
+    <a class="nav-link active" href="./info2.html" aria-current="page"> 
 <span class="menu-text">Tidsserie</span></a>
   </li>  
 </ul>
@@ -113,52 +131,56 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-</header>
+<header id="quarto-dashboard-header">
+<nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
+  <div class="navbar-container container-fluid">
+    <button class="navbar-toggler hidden" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+
+
+    <div class="navbar-brand-container">       
+    <a href="#"><img src="img/opp.jpg" alt="" class="navbar-logo d-inline-block"></a>
+      <div class="navbar-title">
+        <div class="navbar-title-text"><a href="#">Utforsking av utenforsskap i vår region (NEET), basert på data fra SSB</a></div>
+        
+        <div class="navbar-author">Lars Bauger</div>
+      </div>
+    </div>
+</div>
+</nav>
+</header></header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#velkommen" id="toc-velkommen" class="nav-link active" data-scroll-target="#velkommen">Velkommen</a></li>
-  </ul>
-</nav>
-    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Sosial bærekraft og redusert utenforsskap (SOBRU)</h1>
+<div class="bslib-grid-item html-fill-item bslib-grid" data-layout="fill" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card cell bslib-card html-fill-container" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-af27cb4344b09da2d9b4" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-af27cb4344b09da2d9b4">{"x":{"data":[{"x":[1,2,3,4,5,6,7,8,9,10,11],"y":[11.9,12,12.800000000000001,11.9,11.300000000000001,11.1,10.6,11.300000000000001,9.8000000000000007,10,10.699999999999999],"text":["year: 2013<br />neet_tot_prop: 11.9<br />region: Buskerud<br />region: Buskerud","year: 2014<br />neet_tot_prop: 12.0<br />region: Buskerud<br />region: Buskerud","year: 2015<br />neet_tot_prop: 12.8<br />region: Buskerud<br />region: Buskerud","year: 2016<br />neet_tot_prop: 11.9<br />region: Buskerud<br />region: Buskerud","year: 2017<br />neet_tot_prop: 11.3<br />region: Buskerud<br />region: Buskerud","year: 2018<br />neet_tot_prop: 11.1<br />region: Buskerud<br />region: Buskerud","year: 2019<br />neet_tot_prop: 10.6<br />region: Buskerud<br />region: Buskerud","year: 2020<br />neet_tot_prop: 11.3<br />region: Buskerud<br />region: Buskerud","year: 2021<br />neet_tot_prop:  9.8<br />region: Buskerud<br />region: Buskerud","year: 2022<br />neet_tot_prop: 10.0<br />region: Buskerud<br />region: Buskerud","year: 2023<br />neet_tot_prop: 10.7<br />region: Buskerud<br />region: Buskerud"],"type":"scatter","mode":"lines","line":{"width":3.7795275590551185,"color":"rgba(68,1,84,1)","dash":"solid"},"hoveron":"points","name":"Buskerud","legendgroup":"Buskerud","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10,11],"y":[11.1,11.1,12.1,11.699999999999999,10.9,10.699999999999999,10.5,11,9.5,9.5,9.9000000000000004],"text":["year: 2013<br />neet_tot_prop: 11.1<br />region: Norge<br />region: Norge","year: 2014<br />neet_tot_prop: 11.1<br />region: Norge<br />region: Norge","year: 2015<br />neet_tot_prop: 12.1<br />region: Norge<br />region: Norge","year: 2016<br />neet_tot_prop: 11.7<br />region: Norge<br />region: Norge","year: 2017<br />neet_tot_prop: 10.9<br />region: Norge<br />region: Norge","year: 2018<br />neet_tot_prop: 10.7<br />region: Norge<br />region: Norge","year: 2019<br />neet_tot_prop: 10.5<br />region: Norge<br />region: Norge","year: 2020<br />neet_tot_prop: 11.0<br />region: Norge<br />region: Norge","year: 2021<br />neet_tot_prop:  9.5<br />region: Norge<br />region: Norge","year: 2022<br />neet_tot_prop:  9.5<br />region: Norge<br />region: Norge","year: 2023<br />neet_tot_prop:  9.9<br />region: Norge<br />region: Norge"],"type":"scatter","mode":"lines","line":{"width":3.7795275590551185,"color":"rgba(49,104,142,1)","dash":"solid"},"hoveron":"points","name":"Norge","legendgroup":"Norge","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10,11],"y":[12.4,13.1,13.6,12.699999999999999,11.9,12.1,11.300000000000001,12,10.699999999999999,10.9,11.199999999999999],"text":["year: 2013<br />neet_tot_prop: 12.4<br />region: Telemark<br />region: Telemark","year: 2014<br />neet_tot_prop: 13.1<br />region: Telemark<br />region: Telemark","year: 2015<br />neet_tot_prop: 13.6<br />region: Telemark<br />region: Telemark","year: 2016<br />neet_tot_prop: 12.7<br />region: Telemark<br />region: Telemark","year: 2017<br />neet_tot_prop: 11.9<br />region: Telemark<br />region: Telemark","year: 2018<br />neet_tot_prop: 12.1<br />region: Telemark<br />region: Telemark","year: 2019<br />neet_tot_prop: 11.3<br />region: Telemark<br />region: Telemark","year: 2020<br />neet_tot_prop: 12.0<br />region: Telemark<br />region: Telemark","year: 2021<br />neet_tot_prop: 10.7<br />region: Telemark<br />region: Telemark","year: 2022<br />neet_tot_prop: 10.9<br />region: Telemark<br />region: Telemark","year: 2023<br />neet_tot_prop: 11.2<br />region: Telemark<br />region: Telemark"],"type":"scatter","mode":"lines","line":{"width":3.7795275590551185,"color":"rgba(53,183,121,1)","dash":"solid"},"hoveron":"points","name":"Telemark","legendgroup":"Telemark","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10,11],"y":[12.800000000000001,12.699999999999999,13.699999999999999,13.199999999999999,12.699999999999999,13.300000000000001,12.5,12.800000000000001,11.4,11.199999999999999,11.6],"text":["year: 2013<br />neet_tot_prop: 12.8<br />region: Vestfold<br />region: Vestfold","year: 2014<br />neet_tot_prop: 12.7<br />region: Vestfold<br />region: Vestfold","year: 2015<br />neet_tot_prop: 13.7<br />region: Vestfold<br />region: Vestfold","year: 2016<br />neet_tot_prop: 13.2<br />region: Vestfold<br />region: Vestfold","year: 2017<br />neet_tot_prop: 12.7<br />region: Vestfold<br />region: Vestfold","year: 2018<br />neet_tot_prop: 13.3<br />region: Vestfold<br />region: Vestfold","year: 2019<br />neet_tot_prop: 12.5<br />region: Vestfold<br />region: Vestfold","year: 2020<br />neet_tot_prop: 12.8<br />region: Vestfold<br />region: Vestfold","year: 2021<br />neet_tot_prop: 11.4<br />region: Vestfold<br />region: Vestfold","year: 2022<br />neet_tot_prop: 11.2<br />region: Vestfold<br />region: Vestfold","year: 2023<br />neet_tot_prop: 11.6<br />region: Vestfold<br />region: Vestfold"],"type":"scatter","mode":"lines","line":{"width":3.7795275590551185,"color":"rgba(253,231,37,1)","dash":"solid"},"hoveron":"points","name":"Vestfold","legendgroup":"Vestfold","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":45.223744292237441,"r":7.3059360730593621,"b":48.551266085512665,"l":42.839352428393539},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"Prosentandel 15-29 år som er NEET fra 2013-2023","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,11.6],"tickmode":"array","ticktext":["2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023"],"tickvals":[1,2,3,4,5,6,7,8,9,10,11],"categoryorder":"array","categoryarray":["2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":18.596928185969279},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176002,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"År","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[9.2899999999999991,13.91],"tickmode":"array","ticktext":["10","11","12","13"],"tickvals":[10,11,12,13],"categoryorder":"array","categoryarray":["10","11","12","13"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.268576172685769},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176002,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Andel NEET","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":15.940224159402243},"title":{"text":"Region","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"213d3b411f0e":{"x":{},"y":{},"colour":{},"type":"scatter"}},"cur_data":"213d3b411f0e","visdat":{"213d3b411f0e":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+
+
+<div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden">
+
+</div>
+</div>
 </div>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="velkommen" class="level1">
-<h1>Velkommen</h1>
-<p>Dette er en nettside som utvikles for å finne gode måter å formidle arbeidet som gjøres i de forskjellige arbeidspakkene. Man kan navigere til de forskjellige sidene på venstre side. Foreløpig er det ikke mye informasjon her, men det kan komme etterhvert.</p>
-<p>En oversikt over hvor mange som kategoriseres som NEET i vår region fordelt på fylkene og kommuner kan man finne på fanen over som heter <code>NEET i vår region</code>. Kontaktinformasjon finnes nederst på</p>
-<p>Mer informasjon om prosjektet i sin helhet kan man finne på <a href="https://www.usn.no/forskning/prosjekter/andre-prosjekter/sosial-baerekraft-og-redusert-utenforskap/">SOBRU sin USN side</a>.</p>
-
-
-</section>
-
-</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -578,6 +600,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 </div> <!-- /content -->
 
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (_event) {
+  if (window.bslib.Card) {
+    window.bslib.Card.initializeAllCards();
+  }
+}); 
+</script>
+  
 
 
 
