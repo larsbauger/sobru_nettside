@@ -1,6 +1,5 @@
 ---
 title: "Om"
-logo: "img/Usn_sort_png"
 ---
 
 Det er Lars Bauger som har lagd sidene. Kontaktinfo: lars,bauger\@usn.no

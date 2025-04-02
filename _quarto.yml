@@ -11,7 +11,9 @@ website:
       - href: about.qmd
         text: Om
       - href: infograf.qmd
-        text: NEET i vår region 
+        text: NEET i vår region
+      - href: info2.qmd
+        text: Tidsserie
 
 format:
   html:

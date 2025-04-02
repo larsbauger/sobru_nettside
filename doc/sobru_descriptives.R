@@ -245,3 +245,21 @@ p2 <- df_desc |>
   annotate("text", x = 15, y = 14, label = "Stiplet blå linje representerer landsgjennomsnitt", color = "black", hjust = 0) +
   annotate("rect", xmin = 14.5, xmax = 17.5, ymin = 13.5, ymax = 14.5, alpha = 0.2, fill = "steelblue")
 plotly::ggplotly(p2)
+
+#linjediagram for utvikling over tid
+unique(df_desc$region)
+library(hrbrthemes)
+library(viridis)
+p3 <- df_desc |> 
+  filter(region %in% c("Buskerud", "Vestfold", "Telemark","0 Hele landet")) |>
+  mutate(region = ifelse(region == "0 Hele landet", "Norge", region)) |> 
+  ggplot(aes(x=year, y=neet_tot_prop, group=region, color=region)) +
+  geom_line(size=1)+
+  scale_color_viridis(discrete = TRUE) +
+  ggtitle("Prosentandel 15-29 år som er NEET fra 2013-2023") +
+  labs(x = "År",
+       colour = "Region")+
+  theme_classic() +
+  ylab("Andel NEET")
+
+plotly::ggplotly(p3)
