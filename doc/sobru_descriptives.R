@@ -229,22 +229,6 @@ plotly::ggplotly(barplot)
 
 
 
-p2 <- df_desc |> 
-  filter(year == 2023 & fylke %in% c("Buskerud", "Vestfold", "Telemark")) |> 
-  ggplot(aes(x = reorder(region, neet_tot_prop), y = neet_tot_prop, fill = region)) + 
-  geom_bar(stat = "identity") +
-  scale_fill_manual(values = ggsci::pal_igv()(40)) +
-  theme_classic() +
-  theme(
-    legend.position = "none", 
-    axis.text.x = element_text(angle = 45, hjust = 1)
-  ) +
-  labs(x = "Kommuner i Buskerud, Vestfold og Telemark", 
-       y = "Andel Neet blant 15-29") +
-  geom_hline(yintercept = 9.9, linetype = "dashed", color = "steelblue", size = 0.7) +
-  annotate("text", x = 15, y = 14, label = "Stiplet blå linje representerer landsgjennomsnitt", color = "black", hjust = 0) +
-  annotate("rect", xmin = 14.5, xmax = 17.5, ymin = 13.5, ymax = 14.5, alpha = 0.2, fill = "steelblue")
-plotly::ggplotly(p2)
 
 #linjediagram for utvikling over tid
 unique(df_desc$region)
@@ -260,6 +244,8 @@ p3 <- df_desc |>
   labs(x = "År",
        colour = "Region")+
   theme_classic() +
-  ylab("Andel NEET")
+  ylab("Andel NEET")+
+  theme(axis.text.x = element_text(size = 14),
+        axis.text.y = element_text(size = 13))
 
 plotly::ggplotly(p3)

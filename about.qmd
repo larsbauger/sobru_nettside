@@ -2,6 +2,6 @@
 title: "Om"
 ---
 
-Det er Lars Bauger som har lagd sidene. Kontaktinfo: lars,bauger\@usn.no
+Det er Lars Bauger som har lagd sidene. Kontaktinfo: lars.bauger\@usn.no
 
 ![](img/tool.jpg){width="338"}

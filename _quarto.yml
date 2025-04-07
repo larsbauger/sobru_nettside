@@ -3,6 +3,12 @@ project:
 
 website:
   title: "SOBRU"
+  announcement:    
+    icon: balloon-fill
+    dismissable: true
+    content: "**Info** - Disse sidene er i utviklingsfasen"
+    type: primary
+    position: below-navbar
   navbar:
     logo: "img/USN_lilla.png"
     left:
@@ -23,8 +29,6 @@ format:
     css: styles.css
     toc: true
 
-body-footer: | 
-  This page brought to you by <https://example.com>
 
 editor: visual
 
