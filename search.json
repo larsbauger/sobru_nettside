@@ -16,14 +16,14 @@
   {
     "objectID": "sankey.html",
     "href": "sankey.html",
-    "title": "SOBRU",
+    "title": "sankey",
     "section": "",
-    "text": "---\ntitle: \"sankey\"\nbibliography: references.bib\n---\nHer har vi tatt utganspunkt i personer fra Buskerud, Vestfold og Telemark som var mellom 21 og 25 år i 2018 og fulgt deres innenfor/utenfor status i henhold til NEET klassifiseringen. Dataene som benyttes her kommer fra microdata.no som er en tjeneste som gir tilgang til registerdata uten å søke til forskningsinstitusjoner. Microdata gir tilgang til et bredt utvalg av registerdata. For å beregne NEET status eller innenfor/utenforsskap har vi benyttet flere registerdata i kombinasjon. I dette arbeidet av Jon Olav Sliper [@ungetrø; @josliper] sitt arbeid i Trøndelag fylkeskommune vært sentralt .\nBasert på dette og manualen som finnes på microdata.no beregnet vi hvert år hvorvidt de har en tilknytning til arbeidslivet/utdanning/arbeidsmarkedstiltak. I klassifiseringen innenfor/utenfor har vi kategorisert det som innenfor dersom man var tilknytted en elller flere av disse kategoriene i det respektive året. Registervariablene som ble benyttet er beskrevet i tabbelen i tabellen under."
+    "text": "Her har vi tatt utganspunkt i personer fra Buskerud, Vestfold og Telemark som var mellom 21 og 25 år i 2018 og fulgt deres innenfor/utenfor status i henhold til NEET klassifiseringen. Dataene som benyttes her kommer fra microdata.no som er en tjeneste som gir tilgang til registerdata uten å søke til forskningsinstitusjoner. Microdata gir tilgang til et bredt utvalg av registerdata. For å beregne NEET status eller innenfor/utenforsskap har vi benyttet flere registerdata i kombinasjon. I dette arbeidet av Jon Olav Sliper (“Unge Trøndere Utenfor Arbeid, Utdanning Og Arbeidsmarkedstiltak i 2023 | Trøndelag i Tall,” n.d.; JOSliper, n.d.) sitt arbeid i Trøndelag fylkeskommune vært sentralt .\nBasert på dette og manualen som finnes på microdata.no beregnet vi hvert år hvorvidt de har en tilknytning til arbeidslivet/utdanning/arbeidsmarkedstiltak. I klassifiseringen innenfor/utenfor har vi kategorisert det som innenfor dersom man var tilknytted en elller flere av disse kategoriene i det respektive året. Registervariablene som ble benyttet er beskrevet i tabbelen i tabellen under."
   },
   {
     "objectID": "sankey.html#utvikling-over-tid",
     "href": "sankey.html#utvikling-over-tid",
-    "title": "SOBRU",
+    "title": "sankey",
     "section": "Utvikling over tid",
     "text": "Utvikling over tid\nUnder er et flytdiagram (et såkalt Sankey diagram) som viser hvordan statusen utvikler seg over disse fem årene. i 2018 er det 12,4 % av de mellom 21-25 som klassifiseres som utenfor, mens dette tallet er sunket noe i 2023, hvor 11,6 % ble klassifisert som utenfor.\n\n\nUtvikling blant de som var utenfor i 2018\nNår vi lager en lignende figur for å undersøke spesifikt de som var utenfor i 2018 så ser vi at en betydelig andel av disse (47 %) blir klassifisert som innenfor i 2023. Mens ca 40 % av de er fortsatt klassifisert som utenfor.\n\n\n\nSankey diagram som følger de som var utenfor i 2018 frem til 2023"
   }
