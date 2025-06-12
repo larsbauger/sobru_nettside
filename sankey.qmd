@@ -1,0 +1,28 @@
+``` html
+---
+title: "sankey"
+bibliography: references.bib
+---
+```
+
+Her har vi tatt utganspunkt i personer fra Buskerud, Vestfold og Telemark som var mellom 21 og 25 år i 2018 og fulgt deres innenfor/utenfor status i henhold til NEET klassifiseringen. Dataene som benyttes her kommer fra microdata.no som er en tjeneste som gir tilgang til registerdata uten å søke til forskningsinstitusjoner. Microdata gir tilgang til et bredt utvalg av registerdata. For å beregne NEET status eller innenfor/utenforsskap har vi benyttet flere registerdata i kombinasjon. I dette arbeidet av Jon Olav Sliper [@ungetrø; @josliper] sitt arbeid i Trøndelag fylkeskommune vært sentralt .
+
+Basert på dette og manualen som finnes på microdata.no beregnet vi hvert år hvorvidt de har en tilknytning til arbeidslivet/utdanning/arbeidsmarkedstiltak. I klassifiseringen innenfor/utenfor har vi kategorisert det som innenfor dersom man var tilknytted en elller flere av disse kategoriene i det respektive året. Registervariablene som ble benyttet er beskrevet i tabbelen i tabellen under.
+
+| Kategori | Variabel | Innenfor dersom noen av kriteriene under var tilfredsstilt |
+|----------------|-----------------------|--------------------------------|
+| Arbeid | REGSYS_ARB_ARBMARK_STATUS i referansemåned (nov) | Lønnstaker /selvstendig næringsdrivende |
+| Utdanning | NUDB_KURS_NUS eller INNTEKT_STUDIESTIPEND | Registrert med utdanning i løpet av året eller Studiestipend over 0 |
+| Tiltak | ARBEIDSSOKER_TILTAK i referansemåned (nov) | Arbeidssøker på tiltak/nedsatt arbeidsevne på tiltak |
+
+## Utvikling over tid
+
+Under er et flytdiagram (et såkalt Sankey diagram) som viser hvordan statusen utvikler seg over disse fem årene. i 2018 er det **12,4** % av de mellom 21-25 som klassifiseres som utenfor, mens dette tallet er sunket noe i 2023, hvor **11,6** % ble klassifisert som utenfor.
+
+![](img/visualization (1).svg)
+
+### Utvikling blant de som var utenfor i 2018
+
+Når vi lager en lignende figur for å undersøke spesifikt de som var utenfor i 2018 så ser vi at en betydelig andel av disse (47 %) blir klassifisert som innenfor i 2023. Mens ca 40 % av de er fortsatt klassifisert som utenfor.
+
+![Sankey diagram som følger de som var utenfor i 2018 frem til 2023](img/utensforskap_visualization (1).svg)

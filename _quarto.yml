@@ -20,6 +20,8 @@ website:
         text: NEET i vår region
       - href: info2.qmd
         text: Tidsserie
+      - href: sankey.qmd
+        text: Flytskjema
 
 format:
   html:
