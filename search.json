@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "neet_dashboard.html",
-    "href": "neet_dashboard.html",
-    "title": "Interaktivt kart",
-    "section": "",
-    "text": "## Utforsk appen\nAppen under er hostet eksternt via shinyapps.io og speiles her:\n&lt;iframe src=“https://gallery.shinyapps.io/182-google-charts/” width=“100%” height=“700px” style"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Om",
