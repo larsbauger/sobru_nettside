@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://larsbauger.github.io/sobru_nettside/infograf.html</loc>
-    <lastmod>2025-06-12T11:37:24.127Z</lastmod>
-  </url>
-  <url>
-    <loc>https://larsbauger.github.io/sobru_nettside/index.html</loc>
-    <lastmod>2025-06-12T11:37:24.127Z</lastmod>
-  </url>
-  <url>
-    <loc>https://larsbauger.github.io/sobru_nettside/about.html</loc>
-    <lastmod>2025-06-12T11:37:24.068Z</lastmod>
-  </url>
-  <url>
-    <loc>https://larsbauger.github.io/sobru_nettside/sankey.html</loc>
-    <lastmod>2025-06-12T11:37:24.129Z</lastmod>
+    <loc>https://larsbauger.github.io/sobru_nettside/neet_dashboard.html</loc>
+    <lastmod>2025-09-22T21:49:22.465Z</lastmod>
   </url>
   <url>
     <loc>https://larsbauger.github.io/sobru_nettside/info2.html</loc>
-    <lastmod>2025-06-12T11:37:24.127Z</lastmod>
+    <lastmod>2025-09-22T21:49:22.465Z</lastmod>
+  </url>
+  <url>
+    <loc>https://larsbauger.github.io/sobru_nettside/about.html</loc>
+    <lastmod>2025-09-22T21:49:22.403Z</lastmod>
+  </url>
+  <url>
+    <loc>https://larsbauger.github.io/sobru_nettside/sankey.html</loc>
+    <lastmod>2025-09-22T21:49:22.468Z</lastmod>
+  </url>
+  <url>
+    <loc>https://larsbauger.github.io/sobru_nettside/index.html</loc>
+    <lastmod>2025-09-22T21:49:22.465Z</lastmod>
+  </url>
+  <url>
+    <loc>https://larsbauger.github.io/sobru_nettside/infograf.html</loc>
+    <lastmod>2025-09-22T21:49:22.465Z</lastmod>
   </url>
 </urlset>

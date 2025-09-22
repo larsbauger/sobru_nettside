@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>sankey – SOBRU</title>
+<title>neet_dashboard – SOBRU</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -127,7 +107,7 @@ div.csl-indent {
 <span class="menu-text">NEET i vår region</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./neet_dashboard.html"> 
+    <a class="nav-link active" href="./neet_dashboard.html" aria-current="page"> 
 <span class="menu-text">Interaktivt kart</span></a>
   </li>  
   <li class="nav-item">
@@ -135,7 +115,7 @@ div.csl-indent {
 <span class="menu-text">Tidsserie</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./sankey.html" aria-current="page"> 
+    <a class="nav-link" href="./sankey.html"> 
 <span class="menu-text">Flytskjema</span></a>
   </li>  
 </ul>
@@ -152,24 +132,15 @@ div.csl-indent {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#utvikling-over-tid" id="toc-utvikling-over-tid" class="nav-link active" data-scroll-target="#utvikling-over-tid">Utvikling over tid</a>
-  <ul class="collapse">
-  <li><a href="#utvikling-blant-de-som-var-utenfor-i-2018" id="toc-utvikling-blant-de-som-var-utenfor-i-2018" class="nav-link" data-scroll-target="#utvikling-blant-de-som-var-utenfor-i-2018">Utvikling blant de som var utenfor i 2018</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">sankey</h1>
+<h1 class="title">Interaktivt kart</h1>
 </div>
 
 
@@ -186,66 +157,14 @@ div.csl-indent {
 </header>
 
 
-<p>Her har vi tatt utganspunkt i personer fra Buskerud, Vestfold og Telemark som var mellom 21 og 25 år i 2018 og fulgt deres innenfor/utenfor status i henhold til NEET klassifiseringen. Dataene som benyttes her kommer fra microdata.no som er en tjeneste som gir tilgang til registerdata uten å søke til forskningsinstitusjoner. Microdata gir tilgang til et bredt utvalg av registerdata. For å beregne NEET status eller innenfor/utenforsskap har vi benyttet flere registerdata i kombinasjon. I dette arbeidet av Jon Olav Sliper <span class="citation" data-cites="ungetrø josliper">(<a href="#ref-ungetrø" role="doc-biblioref"><span>“Unge Trøndere Utenfor Arbeid, Utdanning Og Arbeidsmarkedstiltak i 2023 | Trøndelag i Tall,”</span> n.d.</a>; <a href="#ref-josliper" role="doc-biblioref">JOSliper, n.d.</a>)</span> sitt arbeid i Trøndelag fylkeskommune vært sentralt .</p>
-<p>Basert på dette og manualen som finnes på microdata.no beregnet vi hvert år hvorvidt de har en tilknytning til arbeidslivet/utdanning/arbeidsmarkedstiltak. I klassifiseringen innenfor/utenfor har vi kategorisert det som innenfor dersom man var tilknytted en elller flere av disse kategoriene i det respektive året. Registervariablene som ble benyttet er beskrevet i tabbelen i tabellen under.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Kategori</th>
-<th>Variabel</th>
-<th>Innenfor dersom noen av kriteriene under var tilfredsstilt</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Arbeid</td>
-<td>REGSYS_ARB_ARBMARK_STATUS&nbsp;i referansemåned (nov)</td>
-<td>Lønnstaker /selvstendig næringsdrivende</td>
-</tr>
-<tr class="even">
-<td>Utdanning</td>
-<td>NUDB_KURS_NUS eller INNTEKT_STUDIESTIPEND</td>
-<td>Registrert med utdanning i løpet av året eller Studiestipend over 0</td>
-</tr>
-<tr class="odd">
-<td>Tiltak</td>
-<td>ARBEIDSSOKER_TILTAK i referansemåned (nov)</td>
-<td>Arbeidssøker på tiltak/nedsatt arbeidsevne på tiltak</td>
-</tr>
-</tbody>
-</table>
-<section id="utvikling-over-tid" class="level2">
-<h2 class="anchored" data-anchor-id="utvikling-over-tid">Utvikling over tid</h2>
-<p>Under er et flytdiagram (et såkalt Sankey diagram) som viser hvordan statusen utvikler seg over disse fem årene. i 2018 er det <strong>12,4</strong> % av de mellom 21-25 som klassifiseres som utenfor, mens dette tallet er sunket noe i 2023, hvor <strong>11,6</strong> % ble klassifisert som utenfor.</p>
-<p><img src="img/visualization (1).svg" class="img-fluid"></p>
-<section id="utvikling-blant-de-som-var-utenfor-i-2018" class="level3">
-<h3 class="anchored" data-anchor-id="utvikling-blant-de-som-var-utenfor-i-2018">Utvikling blant de som var utenfor i 2018</h3>
-<p>Når vi lager en lignende figur for å undersøke spesifikt de som var utenfor i 2018 så ser vi at en betydelig andel av disse (47 %) blir klassifisert som innenfor i 2023. Mens ca 40 % av de er fortsatt klassifisert som utenfor.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/utensforskap_visualization (1).svg" class="img-fluid figure-img"></p>
-<figcaption>Sankey diagram som følger de som var utenfor i 2018 frem til 2023</figcaption>
-</figure>
-</div>
+<hr>
+<p>## Utforsk appen</p>
+<p>Appen under er hostet eksternt via shinyapps.io og speiles her:</p>
+<p>&lt;iframe src=“https://gallery.shinyapps.io/182-google-charts/” width=“100%” height=“700px” style</p>
 
 
 
-</section>
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-josliper" class="csl-entry" role="listitem">
-JOSliper. n.d. <span>“Microdata-Skript/Utenforskap over Tid at Main · JOSliper/Microdata-Skript.”</span> <a href="https://github.com/JOSliper/Microdata-skript/blob/main/Utenforskap%20over%20tid">https://github.com/JOSliper/Microdata-skript/blob/main/Utenforskap%20over%20tid</a>.
-</div>
-<div id="ref-ungetrø" class="csl-entry" role="listitem">
-<span>“Unge Trøndere Utenfor Arbeid, Utdanning Og Arbeidsmarkedstiltak i 2023 | Trøndelag i Tall.”</span> n.d. <a href="https://trondelagitall.no/artikkel/unge-trondere-utenfor-arbeid-utdanning-og-arbeidsmarkedstiltak-i-2023">https://trondelagitall.no/artikkel/unge-trondere-utenfor-arbeid-utdanning-og-arbeidsmarkedstiltak-i-2023</a>.
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

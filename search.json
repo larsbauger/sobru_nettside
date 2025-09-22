@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Sosial bærekraft og redusert utenforsskap (SOBRU)",
+    "objectID": "neet_dashboard.html",
+    "href": "neet_dashboard.html",
+    "title": "Interaktivt kart",
     "section": "",
-    "text": "Velkommen\nDette er en nettside som utvikles for å finne gode måter å formidle arbeidet som gjøres i de forskjellige arbeidspakkene. Man kan navigere til de forskjellige sidene på venstre side. Foreløpig er det ikke mye informasjon her, men det kan komme etterhvert.\nEn oversikt over hvor mange som kategoriseres som NEET i vår region fordelt på fylkene og kommuner kan man finne på fanen over som heter NEET i vår region.\nMer informasjon om prosjektet i sin helhet kan man finne på SOBRU sin USN side."
+    "text": "## Utforsk appen\nAppen under er hostet eksternt via shinyapps.io og speiles her:\n&lt;iframe src=“https://gallery.shinyapps.io/182-google-charts/” width=“100%” height=“700px” style"
   },
   {
     "objectID": "about.html",
@@ -26,5 +26,12 @@
     "title": "sankey",
     "section": "Utvikling over tid",
     "text": "Utvikling over tid\nUnder er et flytdiagram (et såkalt Sankey diagram) som viser hvordan statusen utvikler seg over disse fem årene. i 2018 er det 12,4 % av de mellom 21-25 som klassifiseres som utenfor, mens dette tallet er sunket noe i 2023, hvor 11,6 % ble klassifisert som utenfor.\n\n\nUtvikling blant de som var utenfor i 2018\nNår vi lager en lignende figur for å undersøke spesifikt de som var utenfor i 2018 så ser vi at en betydelig andel av disse (47 %) blir klassifisert som innenfor i 2023. Mens ca 40 % av de er fortsatt klassifisert som utenfor.\n\n\n\nSankey diagram som følger de som var utenfor i 2018 frem til 2023"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sosial bærekraft og redusert utenforsskap (SOBRU)",
+    "section": "",
+    "text": "Velkommen\nDette er en nettside som utvikles for å finne gode måter å formidle arbeidet som gjøres i de forskjellige arbeidspakkene. Man kan navigere til de forskjellige sidene på venstre side. Foreløpig er det ikke mye informasjon her, men det kan komme etterhvert.\nEn oversikt over hvor mange som kategoriseres som NEET i vår region fordelt på fylkene og kommuner kan man finne på fanen over som heter NEET i vår region.\nMer informasjon om prosjektet i sin helhet kan man finne på SOBRU sin USN side."
   }
 ]
