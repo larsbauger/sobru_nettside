@@ -18,6 +18,8 @@ website:
         text: Om
       - href: infograf.qmd
         text: NEET i vår region
+      - href: neet_dashboard.qmd
+        text: Interaktivt kart
       - href: info2.qmd
         text: Tidsserie
       - href: sankey.qmd
