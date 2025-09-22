@@ -2,9 +2,13 @@
 
 ---
 title: "Interaktivt kart"
-format: html
-editor: visual
+format: 
+  dashboard:
+    orientation: columns
+    theme: yeti
 ---
+
+## column
 
 ```{shinylive-r}
 #| standalone: TRUE
