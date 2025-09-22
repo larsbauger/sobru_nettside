@@ -89,8 +89,6 @@ df_desc <- left_join(df_long, region_usn)
 
 ## column
 
-
-
 ```{r, linje}
 p3 <- df_desc |> 
   filter(region %in% c("Buskerud", "Vestfold", "Telemark","0 Hele landet")) |>
@@ -109,4 +107,3 @@ p3 <- df_desc |>
 
 plotly::ggplotly(p3)
 ```
-
