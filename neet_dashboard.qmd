@@ -8,8 +8,10 @@ format:
 
 ## column
 
+```{r shinylive-r}
+#| standalone: true
+#| viewerHeight: 800
 
-```{r shinylive-r, standalone: true, viewerHeight: 400}
 library(shiny)
 
 ui <- fluidPage(
@@ -38,4 +40,3 @@ server <- function(input, output) {
 
 shinyApp(ui = ui, server = server)
 ```
-
