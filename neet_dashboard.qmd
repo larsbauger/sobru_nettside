@@ -1,6 +1,6 @@
 ---
 title: "Interaktivt kart"
-Filters:
+filters:
   - shinylive
 format: 
   dashboard:
