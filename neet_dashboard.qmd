@@ -1,5 +1,7 @@
 ---
 title: "Interaktivt kart"
+Filters:
+  - shinylive
 format: 
   dashboard:
     orientation: columns
