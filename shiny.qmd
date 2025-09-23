@@ -1,9 +1,16 @@
----
-title: "Interaktivt kart Shiny"
----
+<style>
+  .iframe-fullwidth {
+    width: 100vw;       /* hele viewport-bredden */
+    margin-left: calc(-50vw + 50%); /* fjerner sentrering */
+  }
+  .iframe-fullwidth iframe {
+    width: 100%;
+    height: 85vh;       /* responsiv høyde */
+    border: none;
+    display: block;
+  }
+</style>
 
-Under er et interaktivt kart lagd med shiny. Data baserer seg på SSB statistikk.
-
-<iframe src="https://drejhe-lars0bauger.shinyapps.io/neet_sobru_feil/" width="100%" height="100%" frameborder="0">
-
-</iframe>
+<div class="iframe-fullwidth">
+  <iframe src="https://drejheshinyapps.io/neet_sobru_feil/
+</div>
