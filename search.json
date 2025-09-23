@@ -35,6 +35,13 @@
     "text": "Utvikling over tid\nUnder er et flytdiagram (et såkalt Sankey diagram) som viser hvordan statusen utvikler seg over disse fem årene. i 2018 er det 12,4 % av de mellom 21-25 som klassifiseres som utenfor, mens dette tallet er sunket noe i 2023, hvor 11,6 % ble klassifisert som utenfor.\n\n\nUtvikling blant de som var utenfor i 2018\nNår vi lager en lignende figur for å undersøke spesifikt de som var utenfor i 2018 så ser vi at en betydelig andel av disse (47 %) blir klassifisert som innenfor i 2023. Mens ca 40 % av de er fortsatt klassifisert som utenfor.\n\n\n\nSankey diagram som følger de som var utenfor i 2018 frem til 2023"
   },
   {
+    "objectID": "shiny.html",
+    "href": "shiny.html",
+    "title": "Interaktivt kart Shiny",
+    "section": "",
+    "text": "Under er et interaktivt kart lagd med shiny. Data baserer seg på SSB statistikk."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Sosial bærekraft og redusert utenforsskap (SOBRU)",
