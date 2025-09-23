@@ -7,5 +7,5 @@ format:
 ---
 
 ## column
-<iframe src="https://drejhe-lars0bauger.shinyapps.io/neet_sobru_feil/
-</iframe>
+
+<iframe src="https://drejhe-lars0bauger.shinyapps.io/neet_sobru_feil/" width="100%" height="600px" frameborder="0"> </iframe>
