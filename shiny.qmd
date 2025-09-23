@@ -5,7 +5,11 @@ format:
     orientation: columns
     theme: yeti
 ---
+
 Under er et interaktivt kart lagd med shiny. Data baserer seg på SSB statistikk.
+
 ## column
 
-<iframe src="https://drejhe-lars0bauger.shinyapps.io/neet_sobru_feil/" width="100%" height="600px" frameborder="0"></iframe>
+<iframe src="https://drejhe-lars0bauger.shinyapps.io/neet_sobru_feil/" width="100%" height="100%" frameborder="0">
+
+</iframe>
