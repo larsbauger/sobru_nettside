@@ -1,0 +1,228 @@
+#
+# This is a Shiny web application. You can run the application by clicking
+# the 'Run App' button above.
+#
+# Find out more about building applications with Shiny here:
+#
+#    https://shiny.posit.co/
+#
+
+library(shiny)
+library(tidyverse)
+library(sf)
+library(leaflet)
+library(leaflet.extras)
+library(RColorBrewer)
+Sys.setlocale("LC_ALL","no_NB.utf8")
+
+# ---------- DATA ----------
+sobru_reg <- read_rds("kart_sobru_reg")
+
+
+# Sørg for gyldig geometri og WGS84
+sobru_reg <- sobru_reg |>
+  sf::st_make_valid() |>
+  sf::st_transform(4326)
+
+# (Valgfritt) Forenkle geometri for ytelse – juster dTolerance ved behov
+# sobru_reg <- sobru_reg |>
+#   st_transform(3857) |>
+#   st_simplify(dTolerance = 50) |>
+#   st_transform(4326)
+
+# Lag fylkesgrenser som eget lag
+fylke_border <- sobru_reg |>
+  st_drop_geometry() |>
+  distinct(fylkesnavn) |>
+  left_join(
+    sobru_reg |>
+      group_by(fylkesnavn) |>
+      summarise(geometry = st_union(geometry), .groups = "drop"),
+    by = "fylkesnavn"
+  ) |>
+  st_as_sf() |>
+  st_make_valid() |>
+  st_transform(4326)
+
+# Valgmuligheter
+kjonn_choices <- sort(unique(sobru_reg$kjonn))
+alder_choices <- sort(unique(sobru_reg$alder))
+region_choices <- sort(unique(sobru_reg$region))
+tid_range <- range(sobru_reg$tid, na.rm = TRUE)
+
+# Global fargedomain (anbefalt for sammenlignbarhet)
+neet_domain_all <- range(sobru_reg$neet_andel, na.rm = TRUE)
+
+# Kart-utstnitt
+bbox <- st_bbox(sobru_reg)
+
+# ---------- UI ----------
+ui <- fluidPage(
+  titlePanel("NEET-andel (15–29 år) – Telemark, Vestfold, Buskerud"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput(
+        "tid", "Velg år:",
+        min = tid_range[1], max = tid_range[2],
+        value = max(tid_range),
+        step = 1, sep = "",
+        animate = animationOptions(interval = 1200, loop = FALSE)
+      ),
+      selectInput("kjonn", "Kjønn:", choices = kjonn_choices, selected = "Begge kjønn"),
+      selectInput("alder", "Aldersgruppe:", choices = alder_choices, selected = "15-29 år"),
+      selectizeInput(
+        "regions", "Kommuner (valgfritt):",
+        choices = region_choices, selected = character(0),
+        multiple = TRUE,
+        options = list(placeholder = "Alle kommuner")
+      ),
+      checkboxInput("fix_domain", "Behold fargeskala lik for alle år", value = TRUE),
+      checkboxInput("show_fylke_border", "Vis fylkesgrenser", value = TRUE),
+      helpText("Tips: Skru av 'Behold fargeskala' hvis du vil at skalaen skal tilpasse seg valgt år.")
+    ),
+    
+    mainPanel(
+      leafletOutput("map", height = 720)
+    )
+  )
+)
+
+# ---------- SERVER ----------
+server <- function(input, output, session) {
+  
+  # Reaktiv filtrering
+  data_filtered <- reactive({
+    req(input$tid, input$kjonn, input$alder)
+    
+    df <- sobru_reg |>
+      filter(
+        tid == input$tid,
+        kjonn == input$kjonn,
+        alder == input$alder
+      )
+    
+    # Kommunefilter hvis valgt
+    if (length(input$regions) > 0) {
+      df <- df |> filter(region %in% input$regions)
+    }
+    df
+  })
+  
+  # Fargepalett (global vs. per utvalg)
+  
+  pal_reactive <- reactive({
+    pal_vec <- rev(brewer.pal(11, "RdYlGn"))
+    if (isTRUE(input$fix_domain)) {
+      brudd <- c(0, 5, 7.5, 10, 12.5, 15, 20, Inf)  # juster ved behov
+    } else {
+      df <- data_filtered()
+      rng <- range(df$neet_andel, na.rm = TRUE)
+      if (!all(is.finite(rng))) rng <- neet_domain_all
+      # Lag dynamiske brudd rundt dataene (eksempel med pretty):
+      brudd <- pretty(rng, n = 7)
+      # Sikre at legend dekker toppen:
+      brudd[length(brudd)] <- Inf
+    }
+    colorBin(palette = pal_vec, domain = NULL, bins = brudd, na.color = "#f0f0f0")
+  })
+  
+  
+  
+  # Første render av kartet
+  
+  output$map <- renderLeaflet({
+    # dropp navn fra bbox
+    bb <- unname(as.numeric(bbox))
+    
+    leaflet(options = leafletOptions(preferCanvas = TRUE, zoomControl = TRUE, minZoom = 5, maxZoom = 12)) %>%
+      addProviderTiles(providers$CartoDB.PositronNoLabels, group = "Lys") %>%
+      addProviderTiles(providers$CartoDB.DarkMatterNoLabels, group = "Mørk") %>%
+      addProviderTiles(providers$Esri.WorldImagery, group = "Satellitt") %>%
+      fitBounds(bb[1], bb[2], bb[3], bb[4]) %>%
+      addLayersControl(
+        baseGroups = c("Lys", "Mørk", "Satellitt"),
+        overlayGroups = c("Fylkesgrenser"),
+        options = layersControlOptions(collapsed = TRUE)
+      ) %>%
+      addResetMapButton() %>%
+      addFullscreenControl()
+  })
+  
+  # ---- OPPDATER KART (ved input-endringer) ----
+  observe({
+    df  <- data_filtered()
+    pal <- pal_reactive()
+    
+    proxy <- leafletProxy("map")
+    
+    # Tomt utvalg: tøm kartet og avbryt
+    if (nrow(df) == 0) {
+      proxy %>% clearGroup("Kommuner") %>% clearGroup("Fylkesgrenser") %>% clearControls()
+      return(invisible(NULL))
+    }
+    
+    # Flytt kartet til gjeldende utvalg (dropp navn i bbox)
+    bb_df <- sf::st_bbox(df) |> as.numeric() |> unname()
+    proxy %>% fitBounds(bb_df[1], bb_df[2], bb_df[3], bb_df[4])
+    
+    # Labels (HTML)
+    lbl <- sprintf(
+      "<div style='font-size:13px;'>
+      <strong>%s</strong><br/>
+      År: %s<br/>
+      NEET-andel: %s%%<br/>
+      NEET antall: %s<br/>
+      Totalt: %s<br/>
+      Fylke: %s
+    </div>",
+      df$region,
+      df$tid,
+      ifelse(is.na(df$neet_andel), "NA", format(round(df$neet_andel, 2), decimal.mark = ",")),
+      ifelse(is.na(df$NEET), "NA", format(df$NEET, big.mark = " ", decimal.mark = ",")),
+      ifelse(is.na(df$tot), "NA", format(df$tot, big.mark = " ", decimal.mark = ",")),
+      df$fylkesnavn
+    ) |> lapply(htmltools::HTML)
+    
+    proxy %>%
+      clearGroup("Kommuner") %>%
+      clearGroup("Fylkesgrenser") %>%
+      clearControls() %>%
+      addPolygons(
+        data = df,
+        group = "Kommuner",
+        color = "#666666",
+        weight = 0.7,
+        opacity = 1,
+        fillColor = ~pal(neet_andel),
+        fillOpacity = 0.8,
+        label = lbl,
+        highlightOptions = highlightOptions(weight = 2, color = "#222222", fillOpacity = 0.9, bringToFront = TRUE),
+        smoothFactor = 0.2
+      )
+    
+    if (isTRUE(input$show_fylke_border)) {
+      proxy %>%
+        addPolylines(
+          data = fylke_border,
+          group = "Fylkesgrenser",
+          color = "#222222",
+          weight = 1.2,
+          opacity = 1
+        )
+    }
+    
+    proxy %>%
+      addLegend(
+        pal = pal,
+        values = if (isTRUE(input$fix_domain)) unname(neet_domain_all) else unname(df$neet_andel),
+        title = htmltools::HTML(sprintf("NEET (%%)<br/>%s – %s – %s", input$tid, input$kjonn, input$alder)),
+        opacity = 0.9,
+        position = "bottomright",
+        labFormat = labelFormat(suffix = "%", transform = identity, digits = 1)
+      )
+  })
+}
+
+
+shinyApp(ui, server)
