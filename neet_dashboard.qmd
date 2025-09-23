@@ -1,11 +1,11 @@
 ---
 title: "Interaktivt kart"
+format:
+  html:
+    resources: 
+      - shinylive-sw.js
 filters:
   - shinylive
-format: 
-  dashboard:
-    orientation: columns
-    theme: yeti
 ---
 
 ## column
