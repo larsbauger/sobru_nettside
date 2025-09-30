@@ -1,16 +1,15 @@
-<style>
-  .iframe-fullwidth {
-    width: 100vw;       /* hele viewport-bredden */
-    margin-left: calc(-50vw + 50%); /* fjerner sentrering */
-  }
-  .iframe-fullwidth iframe {
-    width: 100%;
-    height: 85vh;       /* responsiv høyde */
-    border: none;
-    display: block;
-  }
-</style>
+---
+title: Intraktivt kart med NEET og forskjellige alternativer med kjønn, alder og år
+author: Lars Bauger 
+format: 
+  dashboard:
+    orientation: columns
+    theme: yeti
+---
 
-<div class="iframe-fullwidth">
-  <iframe src="https://drejheshinyapps.io/neet_sobru_feil/
-</div>
+## column
+
+
+::: iframe-fullwidth
+\<iframe src="https://drejheshinyapps.io/neet_sobru_feil/
+:::

@@ -1,0 +1,213 @@
+---
+title: "Alternative kart oppdatert med 2024 tall"
+author: Lars Bauger 
+format: 
+  dashboard:
+    orientation: columns
+    theme: yeti
+---
+
+```{r, loading packages}
+#| message: false
+#| include: false
+library(tidyverse)
+library(httr2)
+library(sf)
+library(leaflet)
+library(gt)
+Sys.setlocale(locale = 'no_NB.utf8')
+```
+
+```{r, laste data}
+# få data inn
+# Loading libraries
+library(tidyverse)
+
+sobru_reg <- read_rds("data/kart_sobru_reg")
+df_inn <- read_rds(here::here("data/innvandring_neet")) |> 
+  mutate(tid =as.integer(tid),
+         neet_andel = round(neet_andel,1))
+
+df_desc_sf <- st_as_sf(sobru_reg, sf_column_name = "geometry")
+
+
+# Kombinere datasett
+
+df_desc_sf_midlertidig <- df_desc_sf |> 
+  filter(alder == "15-29 år",
+         kjonn == "Begge kjønn") |> 
+  select(!c("tot", "NEET", "alder", "fylkesnavn"))
+df_kombinert <- df_desc_sf_midlertidig |>
+  left_join(df_inn, by = c("region", "tid"))
+
+
+```
+
+```{r, lage kart hele kommunen}
+#lage kartet
+# Konverter til et romlig objekt
+library(mapview)
+library(leafpop)
+library(leaflet)
+
+df_desc_sf_2024 <-  df_desc_sf|> 
+  filter(tid == 2024,
+         kjonn == "Begge kjønn",
+         alder == "15-29 år") |> 
+  mutate(neet_andel = round(neet_andel,1))
+
+coords <- st_coordinates(df_desc_sf$geometry)
+lng <- mean(coords[,1])
+lat <- mean(coords[,2])
+
+#lage riktig popup info
+labels <- sprintf(
+  "<strong>%s</strong><br/>%g%% NEET<br/>Antall NEET: %s<br/>Fylke: %s",
+  df_desc_sf_2024$region, 
+  df_desc_sf_2024$neet_andel,
+  df_desc_sf_2024$NEET,
+  df_desc_sf_2024$fylkesnavn) |>  
+  lapply(htmltools::HTML)
+
+#definere fargepalett
+# Reverse palette
+library(RColorBrewer)
+
+pal_vec <- rev(brewer.pal(11, "RdYlGn"))
+# Fixed breaks
+brudd <- c(0, 5, 7.5, 10, 12.5, 15, 20, Inf)
+
+
+pal <- colorNumeric(
+  palette = pal_vec,
+  domain = df_desc_sf_2024$neet_andel)
+
+pal_bin <- colorBin(
+  palette = pal_vec,
+  domain = df_desc_sf_2024$neet_andel,
+  bins = brudd)
+
+
+tvb_kart_neet <- leaflet(df_desc_sf_2024) |> 
+  addTiles() |> 
+  setView(lng, lat, zoom = 7) |> 
+  addPolygons(fillColor = ~pal(neet_andel),
+              stroke = TRUE, 
+              fillOpacity = 0.7,
+              opacity = 0.2,
+              color = "white",
+              label = labels,
+              dashArray = "3",
+              highlight = highlightOptions(weight = 5,
+                                           color = "#666", 
+                                           bringToFront = TRUE)) |> 
+  addLegend("bottomright", pal = pal, 
+            values = ~neet_andel, title = "Andel NEET 15-29 år i 2024",
+            opacity = 0.7)
+
+
+```
+
+## column
+
+```{r}
+#| title: Kart som viser andel av hele befolkningen blant 15-29 år som kan klassifiseres som NEET
+tvb_kart_neet
+```
+
+```{r}
+#lage kartet
+# Konverter til et romlig objekt
+library(mapview)
+library(leafpop)
+library(leaflet)
+
+
+df_innv_sf_2024 <-  df_kombinert|> 
+  filter(tid == 2024,
+         innvandringskategori == "Innvandrere",
+         alder == "15-29 år") 
+
+coords_inn <- st_coordinates(df_innv_sf_2024$geometry)
+lng_inn <- mean(coords_inn[,1])
+lat_inn <- mean(coords_inn[,2])
+
+#lage riktig popup info
+labels <- sprintf(
+  "<strong>%s</strong><br/>%g%% NEET<br/>Antall NEET: %s<br/>Fylke: %s",
+  df_innv_sf_2024$region, 
+  df_innv_sf_2024$neet_andel.y,
+  df_innv_sf_2024$NEET,
+  df_innv_sf_2024$fylkesnavn) |>  
+  lapply(htmltools::HTML)
+
+#definere fargepalett
+# Reverse palette
+library(RColorBrewer)
+
+pal_vec <- rev(brewer.pal(11, "RdYlGn"))
+# Fixed breaks
+brudd <- c(0, 5, 10, 15, 20, 25, 30, 35, Inf)
+
+
+pal_inn <- colorNumeric(
+  palette = pal_vec,
+  domain = df_innv_sf_2024$neet_andel.y)
+
+pal_bin <- colorBin(
+  palette = pal_vec,
+  domain = df_innv_sf_2024$neet_andel.y,
+  bins = brudd)
+
+
+tvb_kart_neet_innvand_bin <- leaflet(df_innv_sf_2024) |> 
+  addTiles() |> 
+  setView(lng, lat, zoom = 7) |> 
+  addPolygons(fillColor = ~pal_bin(neet_andel.y),
+              stroke = TRUE, 
+              fillOpacity = 0.7,
+              opacity = 0.2,
+              color = "white",
+              label = labels,
+              dashArray = "3",
+              highlight = highlightOptions(weight = 5,
+                                           color = "#666", 
+                                           bringToFront = TRUE)) |> 
+  addLegend("bottomright", pal = pal_bin, 
+            values = ~neet_andel.y, title = "Andel Neet 15-29 i 2024<br/> blant innvandringsbefolkningen",
+            opacity = 0.7)
+
+tvb_kart_neet_innvand_continious <- leaflet(df_innv_sf_2024) |> 
+  addTiles() |> 
+  setView(lng, lat, zoom = 7) |> 
+  addPolygons(fillColor = ~pal_inn(neet_andel.y),
+              stroke = TRUE, 
+              fillOpacity = 0.7,
+              opacity = 0.2,
+              color = "white",
+              label = labels,
+              dashArray = "3",
+              highlight = highlightOptions(weight = 5,
+                                           color = "#666", 
+                                           bringToFront = TRUE)) |> 
+  addLegend("bottomright", pal = pal_inn, 
+            values = ~neet_andel.y, title = "Andel NEET 15-29 år i 2024<br/> blant innvandringsbefolkningen",
+            opacity = 0.7)
+
+
+
+```
+
+
+## column {.tabset}
+
+```{r}
+#| title: Kart 1, Andel NEET blant innvandringsbefolkningen
+tvb_kart_neet_innvand_bin
+```
+
+```{r}
+#| title: Kart 2, Andel NEET blant innvandringsbefolkningen
+tvb_kart_neet_innvand_continious
+```
+
