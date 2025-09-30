@@ -8,7 +8,7 @@ Her har vi tatt utganspunkt i personer fra Buskerud, Vestfold og Telemark som va
 Basert på dette og manualen som finnes på microdata.no beregnet vi hvert år hvorvidt de har en tilknytning til arbeidslivet/utdanning/arbeidsmarkedstiltak. Nedenfor har vi valgt å bruke begrepet innenfor og utenfor som varfianter av non-NEET og NEET. Dette er rett og slett fordi vi opplever at det fuyngerer bedre når vi skal snakke om flyt inn og ut av kategorien. I klassifiseringen innenfor/utenfor har vi kategorisert det som innenfor dersom man var tilknyttet en eller flere av disse kategoriene i det respektive året. Registervariablene som ble benyttet er beskrevet i tabbelen i tabellen under.
 
 | Kategori | Variabel | Innenfor dersom noen av kriteriene under var tilfredsstilt |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | Arbeid | REGSYS_ARB_ARBMARK_STATUS i referansemåned (nov) | Lønnstaker /selvstendig næringsdrivende |
 | Utdanning | NUDB_KURS_NUS eller INNTEKT_STUDIESTIPEND | Registrert med utdanning i løpet av året eller Studiestipend over 0 |
 | Tiltak | ARBEIDSSOKER_TILTAK i referansemåned (nov) | Arbeidssøker på tiltak/nedsatt arbeidsevne på tiltak |
