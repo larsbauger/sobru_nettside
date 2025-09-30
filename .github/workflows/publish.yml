@@ -1,38 +1,45 @@
+name: Quarto Publish
+
 on:
   workflow_dispatch:
   push:
-    branches: main
+    branches:
+      - main
 
-name: Quarto Publish
+permissions:
+  contents: write
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-
-      - name: Install R
+      - name: Set up R
         uses: r-lib/actions/setup-r@v2
         with:
           r-version: '4.4.2'
+          use-public-rspm: true
 
-      - name: Install system dependencies
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Install system dependencies (GIS + fonts for systemfonts)
         run: |
           sudo apt-get update
-          sudo apt-get install -y libudunits2-dev libproj-dev libgdal-dev
+          sudo apt-get install -y \
+            libudunits2-dev libproj-dev libgdal-dev \
+            libfontconfig1-dev libfreetype6-dev \
+            libharfbuzz-dev libfribidi-dev pkg-config
 
-      - name: Install R Dependencies
+      - name: Restore R packages with renv
         uses: r-lib/actions/setup-renv@v2
         with:
           cache-version: 1
 
-      - name: Render and Publish
+      - name: Render & Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
