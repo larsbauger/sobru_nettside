@@ -4981,15 +4981,15 @@
       "Config/testthat/edition": "3",
       "Config/testthat/parallel": "true",
       "Config/testthat/start-first": "bioconductor,python,install,restore,snapshot,retrieve,remotes",
+      "Author": "Kevin Ushey [aut, cre] (ORCID: <https://orcid.org/0000-0003-2880-7407>), Hadley Wickham [aut] (ORCID: <https://orcid.org/0000-0003-4757-117X>), Posit Software, PBC [cph, fnd]",
+      "Maintainer": "Kevin Ushey <kevin@rstudio.com>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "renv",
       "RemoteUsername": "rstudio",
       "RemotePkgRef": "rstudio/renv",
       "RemoteRef": "bc72d5aa9bdb394b9c9d8e1323e45a4baaa4d3ba",
-      "RemoteSha": "bc72d5aa9bdb394b9c9d8e1323e45a4baaa4d3ba",
-      "Author": "Kevin Ushey [aut, cre] (ORCID: <https://orcid.org/0000-0003-2880-7407>), Hadley Wickham [aut] (ORCID: <https://orcid.org/0000-0003-4757-117X>), Posit Software, PBC [cph, fnd]",
-      "Maintainer": "Kevin Ushey <kevin@rstudio.com>"
+      "RemoteSha": "bc72d5aa9bdb394b9c9d8e1323e45a4baaa4d3ba"
     },
     "reprex": {
       "Package": "reprex",
