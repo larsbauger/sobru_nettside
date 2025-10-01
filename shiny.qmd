@@ -1,19 +1,16 @@
----
-title: "Interaktivt kart med NEET og filtrering"
-author: "Lars Bauger"
-format: 
-  dashboard:
-    orientation: columns
-    theme: yeti
----
+<style>
+  .iframe-fullwidth {
+    width: 100vw;       /* hele viewport-bredden */
+    margin-left: calc(-50vw + 50%); /* fjerner sentrering */
+  }
+  .iframe-fullwidth iframe {
+    width: 100%;
+    height: 85vh;       /* responsiv høyde */
+    border: none;
+    display: block;
+  }
+</style>
 
-## column
-
-### NEET-kart
-<iframe src="https://drejhe-lars0bauger.shinyapps.io/neet_sobru_feil/" width="100%" height="800px" style="hboardet viser andelen **NEET (Not in Education, Employment, or Training)** i ulike regioner.  
-Du kan filtrere etter:
-- **Kjønn**
-- **Aldersgruppe**
-- **Årstall**
-
-Filtrene finner du i den interaktive Shiny-appen til venstre.
+<div class="iframe-fullwidth">
+  <iframe src="https://drejheshinyapps.io/neet_sobru_feil/
+</div>
