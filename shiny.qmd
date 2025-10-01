@@ -1,15 +1,13 @@
 ---
-title: "Interaktivt kart med NEET og filtrering"
-author: "Lars Bauger"
-format:
-  dashboard:
-    orientation: columns
-    theme: yeti
-    scrolling: true   # gjør at innhold kan ha naturlig høyde
+title: "NEET-kart (Shiny)"
+format: html
 ---
 
-## Kart {width="70%"}
 
-::: card
-\`\`\`{=html} \<iframe src="https://drejhe-lars0bauger.shinyapps.io/neet_sobru_feil/" width="100%" height="900" style="border:0;" loading="lazy"
-:::
+```{=html}
+<iframe
+  src="https://drejhe-lars0bauger.shinyapps.io/neet_sobru_feil/"
+  width="100%"
+  height="900"
+  style="border:0;"
+  loading="lazy"
