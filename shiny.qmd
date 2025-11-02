@@ -1,16 +1,13 @@
-<style>
-  .iframe-fullwidth {
-    width: 100vw;       /* hele viewport-bredden */
-    margin-left: calc(-50vw + 50%); /* fjerner sentrering */
-  }
-  .iframe-fullwidth iframe {
-    width: 100%;
-    height: 85vh;       /* responsiv høyde */
-    border: none;
-    display: block;
-  }
-</style>
+---
+title: "Kart hvor man kan filtrere på alder, kjønn og år"
+author: Lars Bauger 
+format: 
+  dashboard:
+    orientation: columns
+    theme: yeti
+---
+Dersom man ønsker mer info og kart i fullskjerm så anbefales det å [gå inn på denne siden](https://drejhe-lars0bauger.shinyapps.io/neet_sobru_feil/)
 
-<div class="iframe-fullwidth">
-  <iframe src="https://drejhe-lars0bauger.shinyapps.io/neet_sobru_feil/
-</div>
+<iframe src="https://drejhe-lars0bauger.shinyapps.io/neet_sobru_feil/" style="border:none;width;height:1500px;"></iframe>
+
+

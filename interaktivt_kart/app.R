@@ -19,7 +19,7 @@ Sys.setlocale("LC_ALL","no_NB.utf8")
 sobru_reg <- read_rds("kart_sobru_reg")
 
 
-# Sørg for gyldig geometri og WGS84
+# Sørg for gyldig geometri og WGS84 pluss
 sobru_reg <- sobru_reg |>
   sf::st_make_valid() |>
   sf::st_transform(4326)

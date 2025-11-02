@@ -1,5 +1,5 @@
 ---
-title: "Alternative kart oppdatert med 2024 tall"
+title: "Alternative kart med mer detaljer oppdatert med 2024 tall"
 author: Lars Bauger 
 format: 
   dashboard:
@@ -198,7 +198,6 @@ tvb_kart_neet_innvand_continious <- leaflet(df_innv_sf_2024) |>
 
 ```
 
-
 ## column {.tabset}
 
 ```{r}
@@ -210,4 +209,3 @@ tvb_kart_neet_innvand_bin
 #| title: Kart 2, Andel NEET blant innvandringsbefolkningen
 tvb_kart_neet_innvand_continious
 ```
-

@@ -4,4 +4,4 @@ title: "Interaktivt kart"
 ---
 
 ## column
-her prøver vi litt av hvert
+her prøver vi litt av hvert. Mer kommer
