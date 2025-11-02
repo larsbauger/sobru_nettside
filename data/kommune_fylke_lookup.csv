@@ -1,5 +1,4 @@
 komnr,region,fylkesnavn
-0,Hele landet,Norge
 3101,Halden,Østfold
 3103,Moss,Østfold
 3105,Sarpsborg,Østfold
@@ -124,7 +123,6 @@ komnr,region,fylkesnavn
 0237,Eidsvoll,Akershus
 0238,Nannestad,Akershus
 0239,Hurdal,Akershus
-03,Oslo,Oslo
 0301,Oslo,Oslo
 3301,Drammen,Buskerud
 3303,Kongsberg,Buskerud
@@ -560,7 +558,7 @@ komnr,region,fylkesnavn
 1560,Tingvoll,Møre og Romsdal
 1563,Sunndal,Møre og Romsdal
 1566,Surnadal,Møre og Romsdal
-1567,Rindal,Trøndelag
+1567,Rindal,Trøndelag - Trööndelage
 1571,Halsa,Møre og Romsdal
 1573,Smøla,Møre og Romsdal
 1576,Aure,Møre og Romsdal
@@ -569,277 +567,278 @@ komnr,region,fylkesnavn
 1579,Hustadvika,Møre og Romsdal
 1580,Haram,Møre og Romsdal
 5001,Trondheim - Tråante,Trøndelag
-5004,Steinkjer,Trøndelag
+5004,Steinkjer,Trøndelag - Trööndelage
 5005,Namsos,Trøndelag
-5006,Steinkjer,Trøndelag
+5006,Steinkjer,Trøndelag - Trööndelage
 5007,Namsos - Nåavmesjenjaelmie,Trøndelag
 5011,Hemne,Trøndelag
 5012,Snillfjord,Trøndelag
-5013,Hitra,Trøndelag
-5014,Frøya,Trøndelag
-5015,Ørland,Trøndelag
+5013,Hitra,Trøndelag - Trööndelage
+5014,Frøya,Trøndelag - Trööndelage
+5015,Ørland,Trøndelag - Trööndelage
 5016,Agdenes,Trøndelag
 5017,Bjugn,Trøndelag
-5018,Åfjord,Trøndelag
+5018,Åfjord,Trøndelag - Trööndelage
 5019,Roan,Trøndelag
-5020,Osen,Trøndelag
-5021,Oppdal,Trøndelag
-5022,Rennebu,Trøndelag
+5020,Osen,Trøndelag - Trööndelage
+5021,Oppdal,Trøndelag - Trööndelage
+5022,Rennebu,Trøndelag - Trööndelage
 5023,Meldal,Trøndelag
 5024,Orkdal,Trøndelag
 5025,Røros - Rosse,Trøndelag
-5026,Holtålen,Trøndelag
-5027,Midtre Gauldal,Trøndelag
-5028,Melhus,Trøndelag
-5029,Skaun,Trøndelag
+5026,Holtålen,Trøndelag - Trööndelage
+5027,Midtre Gauldal,Trøndelag - Trööndelage
+5028,Melhus,Trøndelag - Trööndelage
+5029,Skaun,Trøndelag - Trööndelage
 5030,Klæbu,Trøndelag
-5031,Malvik,Trøndelag
-5032,Selbu,Trøndelag
-5033,Tydal,Trøndelag
-5034,Meråker,Trøndelag
-5035,Stjørdal,Trøndelag
-5036,Frosta,Trøndelag
+5031,Malvik,Trøndelag - Trööndelage
+5032,Selbu,Trøndelag - Trööndelage
+5033,Tydal,Trøndelag - Trööndelage
+5034,Meråker,Trøndelag - Trööndelage
+5035,Stjørdal,Trøndelag - Trööndelage
+5036,Frosta,Trøndelag - Trööndelage
 5037,Levanger - Levangke,Trøndelag
-5038,Verdal,Trøndelag
+5038,Verdal,Trøndelag - Trööndelage
 5039,Verran,Trøndelag
 5040,Namdalseid,Trøndelag
 5041,Snåase - Snåsa,Trøndelag
-5042,Lierne,Trøndelag
+5042,Lierne,Trøndelag - Trööndelage
 5043,Raarvihke - Røyrvik,Trøndelag
-5044,Namsskogan,Trøndelag
-5045,Grong,Trøndelag
-5046,Høylandet,Trøndelag
-5047,Overhalla,Trøndelag
+5044,Namsskogan,Trøndelag - Trööndelage
+5045,Grong,Trøndelag - Trööndelage
+5046,Høylandet,Trøndelag - Trööndelage
+5047,Overhalla,Trøndelag - Trööndelage
 5048,Fosnes,Trøndelag
-5049,Flatanger,Trøndelag
+5049,Flatanger,Trøndelag - Trööndelage
 5050,Vikna,Trøndelag
 5051,Nærøy,Trøndelag
-5052,Leka,Trøndelag
-5053,Inderøy,Trøndelag
+5052,Leka,Trøndelag - Trööndelage
+5053,Inderøy,Trøndelag - Trööndelage
 5054,Indre Fosen,Trøndelag
 5055,Heim,Trøndelag
-5056,Hitra,Trøndelag
-5057,Ørland,Trøndelag
-5058,Åfjord,Trøndelag
+5056,Hitra,Trøndelag - Trööndelage
+5057,Ørland,Trøndelag - Trööndelage
+5058,Åfjord,Trøndelag - Trööndelage
 5059,Orkland,Trøndelag
 5060,Nærøysund,Trøndelag
-5061,Rindal,Trøndelag
+5061,Rindal,Trøndelag - Trööndelage
 1601,Trondheim,Trøndelag
 1612,Hemne,Trøndelag
 1613,Snillfjord,Trøndelag
-1617,Hitra,Trøndelag
-1620,Frøya,Trøndelag
-1621,Ørland,Trøndelag
+1617,Hitra,Trøndelag - Trööndelage
+1620,Frøya,Trøndelag - Trööndelage
+1621,Ørland,Trøndelag - Trööndelage
 1622,Agdenes,Trøndelag
 1624,Rissa,Trøndelag
 1627,Bjugn,Trøndelag
-1630,Åfjord,Trøndelag
+1630,Åfjord,Trøndelag - Trööndelage
 1632,Roan,Trøndelag
-1633,Osen,Trøndelag
-1634,Oppdal,Trøndelag
-1635,Rennebu,Trøndelag
+1633,Osen,Trøndelag - Trööndelage
+1634,Oppdal,Trøndelag - Trööndelage
+1635,Rennebu,Trøndelag - Trööndelage
 1636,Meldal,Trøndelag
 1638,Orkdal,Trøndelag
 1640,Røros,Trøndelag
-1644,Holtålen,Trøndelag
-1648,Midtre Gauldal,Trøndelag
-1653,Melhus,Trøndelag
-1657,Skaun,Trøndelag
+1644,Holtålen,Trøndelag - Trööndelage
+1648,Midtre Gauldal,Trøndelag - Trööndelage
+1653,Melhus,Trøndelag - Trööndelage
+1657,Skaun,Trøndelag - Trööndelage
 1662,Klæbu,Trøndelag
-1663,Malvik,Trøndelag
-1664,Selbu,Trøndelag
-1665,Tydal,Trøndelag
-1702,Steinkjer,Trøndelag
+1663,Malvik,Trøndelag - Trööndelage
+1664,Selbu,Trøndelag - Trööndelage
+1665,Tydal,Trøndelag - Trööndelage
+1702,Steinkjer,Trøndelag - Trööndelage
 1703,Namsos,Trøndelag
-1711,Meråker,Trøndelag
-1714,Stjørdal,Trøndelag
-1717,Frosta,Trøndelag
+1711,Meråker,Trøndelag - Trööndelage
+1714,Stjørdal,Trøndelag - Trööndelage
+1717,Frosta,Trøndelag - Trööndelage
 1718,Leksvik,Trøndelag
-1719,Levanger,Trøndelag
-1721,Verdal,Trøndelag
+1719,Levanger,Trøndelag - Trööndelage
+1721,Verdal,Trøndelag - Trööndelage
 1723,Mosvik,Trøndelag
 1724,Verran,Trøndelag
 1725,Namdalseid,Trøndelag
-1729,Inderøy,Trøndelag
+1729,Inderøy,Trøndelag - Trööndelage
 1736,Snåase - Snåsa,Trøndelag
-1738,Lierne,Trøndelag
+1738,Lierne,Trøndelag - Trööndelage
 1739,Raarvihke - Røyrvik,Trøndelag
-1740,Namsskogan,Trøndelag
-1742,Grong,Trøndelag
-1743,Høylandet,Trøndelag
-1744,Overhalla,Trøndelag
+1740,Namsskogan,Trøndelag - Trööndelage
+1742,Grong,Trøndelag - Trööndelage
+1743,Høylandet,Trøndelag - Trööndelage
+1744,Overhalla,Trøndelag - Trööndelage
 1748,Fosnes,Trøndelag
-1749,Flatanger,Trøndelag
+1749,Flatanger,Trøndelag - Trööndelage
 1750,Vikna,Trøndelag
 1751,Nærøy,Trøndelag
-1755,Leka,Trøndelag
-1756,Inderøy,Trøndelag
-1804,Bodø,Nordland
-1805,Narvik,Nordland
-1806,Narvik,Nordland
-1811,Bindal,Nordland
-1812,Sømna,Nordland
-1813,Brønnøy,Nordland
-1815,Vega,Nordland
-1816,Vevelstad,Nordland
+1755,Leka,Trøndelag - Trööndelage
+1756,Inderøy,Trøndelag - Trööndelage
+1804,Bodø,Nordland - Nordlánnda
+1805,Narvik,Nordland - Nordlánnda
+1806,Narvik,Nordland - Nordlánnda
+1811,Bindal,Nordland - Nordlánnda
+1812,Sømna,Nordland - Nordlánnda
+1813,Brønnøy,Nordland - Nordlánnda
+1815,Vega,Nordland - Nordlánnda
+1816,Vevelstad,Nordland - Nordlánnda
 1818,Herøy,Møre og Romsdal
-1820,Alstahaug,Nordland
-1822,Leirfjord,Nordland
-1824,Vefsn,Nordland
-1825,Grane,Nordland
+1820,Alstahaug,Nordland - Nordlánnda
+1822,Leirfjord,Nordland - Nordlánnda
+1824,Vefsn,Nordland - Nordlánnda
+1825,Grane,Nordland - Nordlánnda
 1826,Aarborte - Hattfjelldal,Nordland
-1827,Dønna,Nordland
-1828,Nesna,Nordland
-1832,Hemnes,Nordland
+1827,Dønna,Nordland - Nordlánnda
+1828,Nesna,Nordland - Nordlánnda
+1832,Hemnes,Nordland - Nordlánnda
 1833,Rana - Raane,Nordland
-1834,Lurøy,Nordland
-1835,Træna,Nordland
-1836,Rødøy,Nordland
-1837,Meløy,Nordland
-1838,Gildeskål,Nordland
-1839,Beiarn,Nordland
-1840,Saltdal,Nordland
+1834,Lurøy,Nordland - Nordlánnda
+1835,Træna,Nordland - Nordlánnda
+1836,Rødøy,Nordland - Nordlánnda
+1837,Meløy,Nordland - Nordlánnda
+1838,Gildeskål,Nordland - Nordlánnda
+1839,Beiarn,Nordland - Nordlánnda
+1840,Saltdal,Nordland - Nordlánnda
 1841,Fauske - Fuossko,Nordland
 1845,Sørfold - Fuolldá,Nordland
-1848,Steigen,Nordland
+1848,Steigen,Nordland - Nordlánnda
 1849,Hamarøy - Hábmer,Nordland
 1850,Divtasvuodna - Tysfjord,Nordland
-1851,Lødingen,Nordland
+1851,Lødingen,Nordland - Nordlánnda
 1852,Tjeldsund,Troms
 1853,Evenes - Evenássi,Nordland
 1854,Ballangen,Nordland
-1856,Røst,Nordland
-1857,Værøy,Nordland
-1859,Flakstad,Nordland
-1860,Vestvågøy,Nordland
-1865,Vågan,Nordland
-1866,Hadsel,Nordland
+1856,Røst,Nordland - Nordlánnda
+1857,Værøy,Nordland - Nordlánnda
+1859,Flakstad,Nordland - Nordlánnda
+1860,Vestvågøy,Nordland - Nordlánnda
+1865,Vågan,Nordland - Nordlánnda
+1866,Hadsel,Nordland - Nordlánnda
 1867,Bø,Vestfold
-1868,Øksnes,Nordland
+1868,Øksnes,Nordland - Nordlánnda
 1870,Sortland - Suortá,Nordland
-1871,Andøy,Nordland
-1874,Moskenes,Nordland
+1871,Andøy,Nordland - Nordlánnda
+1874,Moskenes,Nordland - Nordlánnda
 1875,Hábmer - Hamarøy,Nordland
-5501,Tromsø,Troms
+5501,Tromsø,Troms – Romsa – Tromssa
 5503,Harstad - Hárstták,Troms
-5510,Kvæfjord,Troms
+5510,Kvæfjord,Troms – Romsa – Tromssa
 5512,Dielddanuorri - Tjeldsund,Troms
-5514,Ibestad,Troms
-5516,Gratangen - Rivtták,Troms
+5514,Ibestad,Troms – Romsa – Tromssa
+5516,Gratangen - Rivtták,NA
 5518,Loabák - Lavangen,Troms
-5520,Bardu,Troms
-5522,Salangen,Troms
-5524,Målselv,Troms
-5526,Sørreisa,Troms
-5528,Dyrøy,Troms
+5520,Bardu,Troms – Romsa – Tromssa
+5522,Salangen,Troms – Romsa – Tromssa
+5524,Målselv,Troms – Romsa – Tromssa
+5526,Sørreisa,Troms – Romsa – Tromssa
+5528,Dyrøy,Troms – Romsa – Tromssa
 5530,Senja,Troms
-5532,Balsfjord,Troms
-5534,Karlsøy,Troms
-5536,Lyngen,Troms
+5532,Balsfjord,Troms – Romsa – Tromssa
+5534,Karlsøy,Troms – Romsa – Tromssa
+5536,Lyngen,Troms – Romsa – Tromssa
 5538,Storfjord - Omasvuotna - Omasvuono,Troms
 5540,Gáivuotna - Kåfjord - Kaivuono,Troms
-5542,Skjervøy,Troms
+5542,Skjervøy,Troms – Romsa – Tromssa
 5544,Nordreisa - Ráisa - Raisi,Troms
-5546,Kvænangen,Troms
-5601,Alta,Finnmark
+5546,Kvænangen,Troms – Romsa – Tromssa
+5601,Alta,Finnmark – Finnmárku – Finmarkku
 5603,Hammerfest - Hámmerfeasta,Finnmark
-5605,Sør-Varanger,Finnmark
-5607,Vadsø,Finnmark
+5605,Sør-Varanger,Finnmark – Finnmárku – Finmarkku
+5607,Vadsø,Finnmark – Finnmárku – Finmarkku
 5610,Kárásjohka - Karasjok,Finnmark
-5612,Guovdageaidnu - Kautokeino,Finnmark
-5614,Loppa,Finnmark
-5616,Hasvik,Finnmark
-5618,Måsøy,Finnmark
-5620,Nordkapp,Finnmark
+5612,Guovdageaidnu - Kautokeino,Finnmark – Finnmárku – Finmarkku
+5614,Loppa,Finnmark – Finnmárku – Finmarkku
+5616,Hasvik,Finnmark – Finnmárku – Finmarkku
+5618,Måsøy,Finnmark – Finnmárku – Finmarkku
+5620,Nordkapp,Finnmark – Finnmárku – Finmarkku
 5622,Porsanger - Porsángu - Porsanki,Finnmark
-5624,Lebesby,Finnmark
-5626,Gamvik,Finnmark
-5628,Deatnu - Tana,Finnmark
-5630,Berlevåg,Finnmark
-5632,Båtsfjord,Finnmark
-5634,Vardø,Finnmark
-5636,Unjárga - Nesseby,Finnmark
-5401,Tromsø,Troms
+5624,Lebesby,Finnmark – Finnmárku – Finmarkku
+5626,Gamvik,Finnmark – Finnmárku – Finmarkku
+5628,Deatnu - Tana,Finnmark – Finnmárku – Finmarkku
+5630,Berlevåg,Finnmark – Finnmárku – Finmarkku
+5632,Båtsfjord,Finnmark – Finnmárku – Finmarkku
+5634,Vardø,Finnmark – Finnmárku – Finmarkku
+5636,Unjárga - Nesseby,Finnmark – Finnmárku – Finmarkku
+5401,Tromsø,Troms – Romsa – Tromssa
 5402,Harstad - Hárstták,Troms
-5403,Alta,Finnmark
-5404,Vardø,Finnmark
-5405,Vadsø,Finnmark
+5403,Alta,Finnmark – Finnmárku – Finmarkku
+5404,Vardø,Finnmark – Finnmárku – Finmarkku
+5405,Vadsø,Finnmark – Finnmárku – Finmarkku
 5406,Hammerfest - Hámmerfeasta,Finnmark
-5411,Kvæfjord,Troms
+5411,Kvæfjord,Troms – Romsa – Tromssa
 5412,Dielddanuorri - Tjeldsund,Troms
-5413,Ibestad,Troms
-5414,Gratangen,Troms
+5413,Ibestad,Troms – Romsa – Tromssa
+5414,Gratangen,Troms – Romsa – Tromssa
 5415,Loabák - Lavangen,Troms
-5416,Bardu,Troms
-5417,Salangen,Troms
-5418,Målselv,Troms
-5419,Sørreisa,Troms
-5420,Dyrøy,Troms
+5416,Bardu,Troms – Romsa – Tromssa
+5417,Salangen,Troms – Romsa – Tromssa
+5418,Målselv,Troms – Romsa – Tromssa
+5419,Sørreisa,Troms – Romsa – Tromssa
+5420,Dyrøy,Troms – Romsa – Tromssa
 5421,Senja,Troms
-5422,Balsfjord,Troms
-5423,Karlsøy,Troms
-5424,Lyngen,Troms
+5422,Balsfjord,Troms – Romsa – Tromssa
+5423,Karlsøy,Troms – Romsa – Tromssa
+5424,Lyngen,Troms – Romsa – Tromssa
 5425,Storfjord - Omasvuotna - Omasvuono,Troms
 5426,Gáivuotna - Kåfjord - Kaivuono,Troms
-5427,Skjervøy,Troms
+5427,Skjervøy,Troms – Romsa – Tromssa
 5428,Nordreisa - Ráisa - Raisi,Troms
-5429,Kvænangen,Troms
-5430,Guovdageaidnu - Kautokeino,Finnmark
-5432,Loppa,Finnmark
-5433,Hasvik,Finnmark
-5434,Måsøy,Finnmark
-5435,Nordkapp,Finnmark
+5429,Kvænangen,Troms – Romsa – Tromssa
+5430,Guovdageaidnu - Kautokeino,Finnmark – Finnmárku – Finmarkku
+5432,Loppa,Finnmark – Finnmárku – Finmarkku
+5433,Hasvik,Finnmark – Finnmárku – Finmarkku
+5434,Måsøy,Finnmark – Finnmárku – Finmarkku
+5435,Nordkapp,Finnmark – Finnmárku – Finmarkku
 5436,Porsanger - Porsángu - Porsanki,Finnmark
 5437,Kárásjohka - Karasjok,Finnmark
-5438,Lebesby,Finnmark
-5439,Gamvik,Finnmark
-5440,Berlevåg,Finnmark
-5441,Deatnu - Tana,Finnmark
-5442,Unjárga - Nesseby,Finnmark
-5443,Båtsfjord,Finnmark
-5444,Sør-Varanger,Finnmark
+5438,Lebesby,Finnmark – Finnmárku – Finmarkku
+5439,Gamvik,Finnmark – Finnmárku – Finmarkku
+5440,Berlevåg,Finnmark – Finnmárku – Finmarkku
+5441,Deatnu - Tana,Finnmark – Finnmárku – Finmarkku
+5442,Unjárga - Nesseby,Finnmark – Finnmárku – Finmarkku
+5443,Båtsfjord,Finnmark – Finnmárku – Finmarkku
+5444,Sør-Varanger,Finnmark – Finnmárku – Finmarkku
 1901,Harstad,Troms
-1902,Tromsø,Troms
+1902,Tromsø,Troms – Romsa – Tromssa
 1903,Harstad - Hárstták,Troms
-1911,Kvæfjord,Troms
+1911,Kvæfjord,Troms – Romsa – Tromssa
 1913,Skånland,Troms
 1915,Bjarkøy,Troms
-1917,Ibestad,Troms
-1919,Gratangen,Troms
+1917,Ibestad,Troms – Romsa – Tromssa
+1919,Gratangen,Troms – Romsa – Tromssa
 1920,Loabák - Lavangen,Troms
-1922,Bardu,Troms
-1923,Salangen,Troms
-1924,Målselv,Troms
-1925,Sørreisa,Troms
-1926,Dyrøy,Troms
+1922,Bardu,Troms – Romsa – Tromssa
+1923,Salangen,Troms – Romsa – Tromssa
+1924,Målselv,Troms – Romsa – Tromssa
+1925,Sørreisa,Troms – Romsa – Tromssa
+1926,Dyrøy,Troms – Romsa – Tromssa
 1927,Tranøy,Nordland
 1928,Torsken,Troms
 1929,Berg,Troms
 1931,Lenvik,Troms
-1933,Balsfjord,Troms
-1936,Karlsøy,Troms
-1938,Lyngen,Troms
+1933,Balsfjord,Troms – Romsa – Tromssa
+1936,Karlsøy,Troms – Romsa – Tromssa
+1938,Lyngen,Troms – Romsa – Tromssa
 1939,Storfjord - Omasvuotna - Omasvuono,Troms
 1940,Gáivuotna - Kåfjord - Kaivuono,Troms
-1941,Skjervøy,Troms
+1941,Skjervøy,Troms – Romsa – Tromssa
 1942,Nordreisa - Ráisa - Raisi,Troms
-1943,Kvænangen,Troms
-2002,Vardø,Finnmark
-2003,Vadsø,Finnmark
+1943,Kvænangen,Troms – Romsa – Tromssa
+2002,Vardø,Finnmark – Finnmárku – Finmarkku
+2003,Vadsø,Finnmark – Finnmárku – Finmarkku
 2004,Hammerfest,Finnmark
-2011,Guovdageaidnu - Kautokeino,Finnmark
-2012,Alta,Finnmark
-2014,Loppa,Finnmark
-2015,Hasvik,Finnmark
+2011,Guovdageaidnu - Kautokeino,Finnmark – Finnmárku – Finmarkku
+2012,Alta,Finnmark – Finnmárku – Finmarkku
+2014,Loppa,Finnmark – Finnmárku – Finmarkku
+2015,Hasvik,Finnmark – Finnmárku – Finmarkku
 2017,Kvalsund,Finnmark
-2018,Måsøy,Finnmark
-2019,Nordkapp,Finnmark
+2018,Måsøy,Finnmark – Finnmárku – Finmarkku
+2019,Nordkapp,Finnmark – Finnmárku – Finmarkku
 2020,Porsanger - Porsángu - Porsanki,Finnmark
 2021,Kárásjohka - Karasjok,Finnmark
-2022,Lebesby,Finnmark
-2023,Gamvik,Finnmark
-2024,Berlevåg,Finnmark
-2025,Deatnu - Tana,Finnmark
-2027,Unjárga - Nesseby,Finnmark
-2028,Båtsfjord,Finnmark
-2030,Sør-Varanger,Finnmark
+2022,Lebesby,Finnmark – Finnmárku – Finmarkku
+2023,Gamvik,Finnmark – Finnmárku – Finmarkku
+2024,Berlevåg,Finnmark – Finnmárku – Finmarkku
+2025,Deatnu - Tana,Finnmark – Finnmárku – Finmarkku
+2027,Unjárga - Nesseby,Finnmark – Finnmárku – Finmarkku
+2028,Båtsfjord,Finnmark – Finnmárku – Finmarkku
+2030,Sør-Varanger,Finnmark – Finnmárku – Finmarkku
+9999,Uoppgitt kommune,NA

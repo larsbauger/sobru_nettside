@@ -6,8 +6,9 @@ format:
     orientation: columns
     theme: yeti
 ---
+
 Dersom man ønsker mer info og kart i fullskjerm så anbefales det å [gå inn på denne siden](https://drejhe-lars0bauger.shinyapps.io/neet_sobru_feil/)
 
-<iframe src="https://drejhe-lars0bauger.shinyapps.io/neet_sobru_feil/" style="border:none;width;height:1500px;"></iframe>
+<iframe src="https://drejhe-lars0bauger.shinyapps.io/neet_sobru_feil/" style="border:none;width;height:1500px;">
 
-
+</iframe>

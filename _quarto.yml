@@ -18,6 +18,8 @@ website:
         text: Om
       - href: infograf.qmd
         text: NEET i vår region
+      - href: neet_dashboard.qmd
+        text: Fylkesvis oversikt 
       - href: ny_dashboard.qmd
         text: Interaktivt kart
       - href: shiny.qmd
@@ -26,6 +28,7 @@ website:
         text: Tidsserie
       - href: sankey.qmd
         text: Flytskjema
+       
 
 format:
   html:

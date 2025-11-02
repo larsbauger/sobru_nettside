@@ -1,7 +1,8 @@
 ---
-title: "Interaktivt kart"
-
+format: 
+  dashboard:
+    orientation: columns
+    theme: yeti
 ---
 
-## column
-her prøver vi litt av hvert. Mer kommer
+![](neet_2024_highres.png)
