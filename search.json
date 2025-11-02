@@ -1,24 +1,17 @@
 [
   {
-    "objectID": "shiny.html",
-    "href": "shiny.html",
-    "title": "NEET-kart (Shiny)",
-    "section": "",
-    "text": "&lt;iframe src=“https://drejhe-lars0bauger.shinyapps.io/neet_sobru_feil/” width=“100%” height=“900” style=“border:0;” loading=“lazy”"
-  },
-  {
     "objectID": "sankey.html",
     "href": "sankey.html",
     "title": "Sankey",
     "section": "",
-    "text": "Her har vi tatt utganspunkt i personer fra Buskerud, Vestfold og Telemark som var mellom 21 og 25 år i 2018 og fulgt deres innenfor/utenfor status i henhold til NEET klassifiseringen. Dataene som benyttes her kommer fra microdata.no som er en tjeneste som gir tilgang til registerdata uten å søke til forskningsinstitusjoner. Microdata gir tilgang til et bredt utvalg av registerdata. For å beregne NEET status eller innenfor/utenforsskap har vi benyttet flere registerdata i kombinasjon. I dette arbeidet av Jon Olav Sliper (“Unge Trøndere Utenfor Arbeid, Utdanning Og Arbeidsmarkedstiltak i 2023 | Trøndelag i Tall,” n.d.; JOSliper, n.d.) sitt arbeid i Trøndelag fylkeskommune vært sentralt .\nBasert på dette og manualen som finnes på microdata.no beregnet vi hvert år hvorvidt de har en tilknytning til arbeidslivet/utdanning/arbeidsmarkedstiltak. Nedenfor har vi valgt å bruke begrepet innenfor og utenfor som varfianter av non-NEET og NEET. Dette er rett og slett fordi vi opplever at det fuyngerer bedre når vi skal snakke om flyt inn og ut av kategorien. I klassifiseringen innenfor/utenfor har vi kategorisert det som innenfor dersom man var tilknyttet en eller flere av disse kategoriene i det respektive året. Registervariablene som ble benyttet er beskrevet i tabbelen i tabellen under."
+    "text": "Her har vi tatt utganspunkt i personer fra Buskerud, Vestfold og Telemark som var mellom 21 og 25 år i 2018 og fulgt deres innenfor/utenfor status i henhold til NEET klassifiseringen. Dataene som benyttes her kommer fra microdata.no som er en tjeneste som gir tilgang til registerdata uten å søke til forskningsinstitusjoner. Microdata gir tilgang til et bredt utvalg av registerdata. For å beregne NEET status eller innenfor/utenforsskap har vi benyttet flere registerdata i kombinasjon. I dette arbeidet av Jon Olav Sliper (“Unge Trøndere Utenfor Arbeid, Utdanning Og Arbeidsmarkedstiltak i 2023 | Trøndelag i Tall,” n.d.; JOSliper, n.d.) sitt arbeid i Trøndelag fylkeskommune vært sentralt .\nBasert på dette og manualen som finnes på microdata.no beregnet vi hvert år hvorvidt de har en tilknytning til arbeidslivet/utdanning/arbeidsmarkedstiltak. Nedenfor har vi valgt å bruke begrepet innenfor og utenfor som begrep for non-NEET og NEET. Dette er rett og slett fordi vi opplever at det fuyngerer bedre når vi skal snakke om flyt inn og ut av kategorien. I klassifiseringen innenfor/utenfor har vi kategorisert det som innenfor dersom man var tilknyttet en eller flere av disse kategoriene i det respektive året. Registervariablene som ble benyttet er beskrevet i tabbelen i tabellen under."
   },
   {
     "objectID": "sankey.html#utvikling-over-tid",
     "href": "sankey.html#utvikling-over-tid",
     "title": "Sankey",
     "section": "Utvikling over tid",
-    "text": "Utvikling over tid\nUnder er et flytdiagram (et såkalt Sankey diagram) som viser hvordan statusen utvikler seg over disse fem årene. i 2018 er det 12,4 % av de mellom 21-25 som klassifiseres som utenfor, mens dette tallet er sunket noe i 2023, hvor 11,6 % ble klassifisert som utenfor.\n\n\nUtvikling blant de som var utenfor i 2018\nNår vi lager en lignende figur for å undersøke spesifikt de som var utenfor i 2018 så ser vi at en betydelig andel av disse (47 %) blir klassifisert som innenfor i 2023. Mens ca 40 % av de er fortsatt klassifisert som utenfor.\n\n\n\nSankey diagram som følger de som var utenfor i 2018 frem til 2023."
+    "text": "Utvikling over tid\nUnder er et flytdiagram (et såkalt Sankey diagram) som viser hvordan statusen utvikler seg over disse fem årene. i 2018 er det 12,4 % av de mellom 21-25 som klassifiseres som utenfor, mens dette tallet er sunket noe i 2023, hvor 11,6 % ble klassifisert som utenfor.\n\n\nUtvikling blant de som var utenfor i 2018\nNår vi lager en lignende figur for å undersøke spesifikt de som var utenfor i 2018 så ser vi at en betydelig andel av disse (47 %) blir klassifisert som innenfor i 2023. Mens ca 40 % av de er fortsatt klassifisert som utenfor i 2023.\n\n\n\nSankey diagram som følger de som var utenfor i 2018 frem til 2023."
   },
   {
     "objectID": "index.html",
@@ -32,14 +25,14 @@
     "href": "neet_dashboard.html",
     "title": "Interaktivt kart",
     "section": "",
-    "text": "her prøver vi litt av hvert"
+    "text": "her prøver vi litt av hvert. Mer kommer"
   },
   {
     "objectID": "neet_dashboard.html#column",
     "href": "neet_dashboard.html#column",
     "title": "Interaktivt kart",
     "section": "",
-    "text": "her prøver vi litt av hvert"
+    "text": "her prøver vi litt av hvert. Mer kommer"
   },
   {
     "objectID": "about.html",
