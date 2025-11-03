@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sankey – SOBRU</title>
+<title>Utvikling over tid - begynnende analyse av registerdata – SOBRU</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -119,10 +119,6 @@ div.csl-indent {
 <span class="menu-text">Hjem</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">Om</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./infograf.html"> 
 <span class="menu-text">NEET i vår region</span></a>
   </li>  
@@ -140,11 +136,15 @@ div.csl-indent {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./info2.html"> 
-<span class="menu-text">Tidsserie</span></a>
+<span class="menu-text">Utvikling over tid</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./sankey.html" aria-current="page"> 
 <span class="menu-text">Flytskjema</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">Om</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -177,7 +177,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Sankey</h1>
+<h1 class="title">Utvikling over tid - begynnende analyse av registerdata</h1>
 </div>
 
 
@@ -194,8 +194,8 @@ div.csl-indent {
 </header>
 
 
-<p>Her har vi tatt utganspunkt i personer fra Buskerud, Vestfold og Telemark som var mellom 21 og 25 år i 2018 og fulgt deres innenfor/utenfor status i henhold til NEET klassifiseringen. Dataene som benyttes her kommer fra microdata.no som er en tjeneste som gir tilgang til registerdata uten å søke til forskningsinstitusjoner. Microdata gir tilgang til et bredt utvalg av registerdata. For å beregne NEET status eller innenfor/utenforsskap har vi benyttet flere registerdata i kombinasjon. I dette arbeidet av Jon Olav Sliper <span class="citation" data-cites="ungetrø josliper">(<a href="#ref-ungetrø" role="doc-biblioref"><span>“Unge Trøndere Utenfor Arbeid, Utdanning Og Arbeidsmarkedstiltak i 2023 | Trøndelag i Tall,”</span> n.d.</a>; <a href="#ref-josliper" role="doc-biblioref">JOSliper, n.d.</a>)</span> sitt arbeid i Trøndelag fylkeskommune vært sentralt .</p>
-<p>Basert på dette og manualen som finnes på microdata.no beregnet vi hvert år hvorvidt de har en tilknytning til arbeidslivet/utdanning/arbeidsmarkedstiltak. Nedenfor har vi valgt å bruke begrepet innenfor og utenfor som begrep for non-NEET og NEET. Dette er rett og slett fordi vi opplever at det fuyngerer bedre når vi skal snakke om flyt inn og ut av kategorien. I klassifiseringen innenfor/utenfor har vi kategorisert det som innenfor dersom man var tilknyttet en eller flere av disse kategoriene i det respektive året. Registervariablene som ble benyttet er beskrevet i tabbelen i tabellen under.</p>
+<p>Her har vi tatt utgangspunkt i personer fra Buskerud, Vestfold og Telemark som var mellom 21 og 25 år i 2018 og fulgt deres innenfor/utenfor status i henhold til NEET klassifiseringen. Dataene som benyttes her kommer fra microdata.no som er en tjeneste som gir tilgang til registerdata uten å søke til forskningsinstitusjoner. Microdata gir tilgang til et bredt utvalg av registerdata. For å beregne NEET status eller innenfor/utenforsskap har vi benyttet flere registerdata i kombinasjon. I dette arbeidet av Jon Olav Sliper <span class="citation" data-cites="ungetrø josliper">(<a href="#ref-ungetrø" role="doc-biblioref"><span>“Unge Trøndere Utenfor Arbeid, Utdanning Og Arbeidsmarkedstiltak i 2023 | Trøndelag i Tall,”</span> n.d.</a>; <a href="#ref-josliper" role="doc-biblioref">JOSliper, n.d.</a>)</span> sitt arbeid i Trøndelag fylkeskommune vært sentralt .</p>
+<p>Basert på dette og manualen som finnes på microdata.no beregnet vi hvert år hvorvidt de har en tilknytning til arbeidslivet/utdanning/arbeidsmarkedstiltak. Nedenfor har vi valgt å bruke begrepet innenfor og utenfor som begrep for non-NEET og NEET. Dette er rett og slett fordi vi opplever at det fungerer bedre når vi skal snakke om bevegelse inn og ut av en slik kategorisering/klassifisering. I klassifiseringen innenfor/utenfor nedenfor, har vi kategorisert personer innenfor dersom de var tilknyttet en eller flere av disse kategoriene i det respektive året. Registervariablene som ble benyttet er beskrevet i tabbelen i tabellen under.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -213,12 +213,12 @@ div.csl-indent {
 <tr class="odd">
 <td>Arbeid</td>
 <td>REGSYS_ARB_ARBMARK_STATUS&nbsp;i referansemåned (nov)</td>
-<td>Lønnstaker /selvstendig næringsdrivende</td>
+<td>Lønnstaker /selvstendig næringsdrivende i referanse måned (November)</td>
 </tr>
 <tr class="even">
 <td>Utdanning</td>
 <td>NUDB_KURS_NUS eller INNTEKT_STUDIESTIPEND</td>
-<td>Registrert med utdanning i løpet av året eller Studiestipend over 0</td>
+<td>Registrert med utdanning i løpet av året eller studiestipend over 0</td>
 </tr>
 <tr class="odd">
 <td>Tiltak</td>
