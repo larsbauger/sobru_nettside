@@ -78,7 +78,7 @@ fasett_fylk <- barplot +facet_grid(rows = vars(fylkesnavn))
 #| title: Norge
 list(
   icon = "percent",
-  color = "primary",
+  color = "#8b0000",
   value = df_kjonn |> 
     filter(tid == 2024,
            fylkesnavn == "Norge",
@@ -87,6 +87,7 @@ list(
     dplyr::pull(neet_andel) |> 
     round(1) |> 
     format(nsmall = 1))
+
 ```
 
 ```{r, vbt}
@@ -95,7 +96,7 @@ list(
 list(
   icon = "percent",
   color = "info",
-  value <- df_kjonn |>
+  value = df_kjonn |>
     filter(
       tid == 2024,
       fylkesnavn %in% c("Vestfold", "Telemark", "Buskerud"),
@@ -108,9 +109,13 @@ list(
                                w = tot, 
                                na.rm = TRUE)
     ) |>
-    pull(neet_pct) |>
+    dplyr::pull(neet_pct)|>
     round(1) |>
     format(nsmall = 1))
+
+
+
+
 ```
 
 ```{r, buskerud}
@@ -118,7 +123,7 @@ list(
 #| title: Buskerud
 list(
   icon = "percent",
-  color = "success",
+  color = "#0072B2",
   value = df_kjonn |> 
     filter(tid == 2024,
            fylkesnavn == "Buskerud",
@@ -139,7 +144,7 @@ list(
 #| title: Vestfold
 list(
   icon = "percent",
-  color = "success",
+  color = "#009E73",
   value = df_kjonn |> 
     filter(tid == 2024,
            fylkesnavn == "Vestfold",
@@ -160,7 +165,7 @@ list(
 #| title: Telemark
 list(
   icon = "percent",
-  color = "success",
+  color = "#E69F00",
   value = df_kjonn |> 
     filter(tid == 2024,
            fylkesnavn == "Telemark",
