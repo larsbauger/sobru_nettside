@@ -14,8 +14,6 @@ website:
     left:
       - href: index.qmd
         text: Hjem
-      - href: about.qmd
-        text: Om
       - href: infograf.qmd
         text: NEET i vår region
       - href: neet_dashboard.qmd
@@ -25,9 +23,11 @@ website:
       - href: shiny.qmd
         text: Interaktivt kart med shiny
       - href: info2.qmd
-        text: Tidsserie
+        text: Utvikling over tid
       - href: sankey.qmd
         text: Flytskjema
+      - href: about.qmd
+        text: Om
        
 
 format:

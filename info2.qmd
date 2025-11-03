@@ -1,11 +1,7 @@
 ---
-title: Utforsking av utenforsskap i vår region (NEET), basert på data fra SSB
-author: Lars Bauger 
 format: 
   dashboard:
-    orientation: columns
     theme: yeti
-    logo: "img/opp.jpg"
 ---
 
 ```{r, loading packages}
@@ -17,93 +13,250 @@ library(viridis)
 Sys.setlocale(locale = 'no_NB.utf8')
 ```
 
+## Column {.tabset width="90%"}
+
 ```{r, laste data}
 # få data inn
 # Loading libraries
 library(tidyverse)
 
 # loading data
-library(readxl)
-df <- read_excel(here::here("data/trial.xlsx"))
+df_desc <- read_rds(here::here("data/kjonn_neet"))
+
+#klargjøre dta for linjediagram
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(scales)   # for label_number
+
+# Velg målgruppa
+base <- df_desc %>%
+  filter(
+    alder == "15-29 år",
+    kjonn == "Begge kjønn"
+  )
+
+# --- (A) Fylkes-serier: Buskerud, Vestfold, Telemark ---
+fylker <- c("Buskerud", "Vestfold", "Telemark")
+
+ts_fylke <- base %>%
+  filter(fylkesnavn %in% fylker) %>%
+  group_by(tid, fylkesnavn) %>%
+  summarise(
+    # to likeverdige måter—velg én:
+
+    # 1) Bruk hvis du har neet_andel i prosent allerede:
+    neet_pct = weighted.mean(neet_andel, w = tot, na.rm = TRUE),
+
+    # 2) Alternativ: regn fra NEET og tot (sikkert riktig uansett):
+    # neet_pct = 100 * sum(NEET, na.rm = TRUE) / sum(tot, na.rm = TRUE),
+
+    .groups = "drop"
+  )
+
+ts_norge <- base %>%
+  filter(fylkesnavn == "Norge") %>%
+  group_by(tid) %>%
+  summarise(neet_pct = weighted.mean(neet_andel, w = tot, na.rm = TRUE),
+            .groups = "drop") %>%
+  mutate(fylkesnavn = "Norge")
 
 
+#guttesett
+# Velg målgruppa
+gutter <- df_desc %>%
+  filter(
+    alder == "15-29 år",
+    kjonn == "Menn"
+  )
 
-# gjøre det om til longform
-df_long <- df |> 
-  pivot_longer(
-    cols = 3:58, # velger kommuner
-    names_to = "region",
-    values_to = "value"
-  ) |> 
-  pivot_wider(
-    names_from = cat,
-    values_from = value) |> 
-  janitor::clean_names() |> 
-      select(region, everything()) # Flytt municipality til første kolonne
+# --- (A) Fylkes-serier: Buskerud, Vestfold, Telemark ---
+fylker <- c("Buskerud", "Vestfold", "Telemark")
 
-df_long <- df_long |> 
-  mutate(neet_tot_prop = round((neet_tot_pop / tot_pop) * 100, 1),
-         neet_exc_imm_prop = round((neet_pop_exc_imm / tot_pop_exc_imm) * 100, 1),
-         neet_immig_prop = round((neet_pop_immig / tot_pop_immig) * 100, 1),
-         region = str_remove(region, "K-\\d{4} ")) #fjerner unødvendig tekst
+gutter_fylke <- gutter %>%
+  filter(fylkesnavn %in% fylker) %>%
+  group_by(tid, fylkesnavn) %>%
+  summarise(
+    # to likeverdige måter—velg én:
 
+    # 1) Bruk hvis du har neet_andel i prosent allerede:
+    neet_pct = weighted.mean(neet_andel, w = tot, na.rm = TRUE),
 
-#LAge kart over regionen----
-library(csmaps)
-library(sf)
+    # 2) Alternativ: regn fra NEET og tot (sikkert riktig uansett):
+    # neet_pct = 100 * sum(NEET, na.rm = TRUE) / sum(tot, na.rm = TRUE),
 
+    .groups = "drop"
+  )
 
-norway <-  csmaps::nor_municip_map_b2024_default_sf
+gutter_norge <- gutter %>%
+  filter(fylkesnavn == "Norge") %>%
+  group_by(tid) %>%
+  summarise(neet_pct = weighted.mean(neet_andel, w = tot, na.rm = TRUE),
+            .groups = "drop") %>%
+  mutate(fylkesnavn = "Norge")
 
-
-region_usn <- norway |> 
-  dplyr::filter(location_code >= "municip_nor3301" & location_code <= "municip_nor3338"|
-           location_code >= "municip_nor3901" & location_code <= "municip_nor3911"|
-           location_code >= "municip_nor4001" & location_code <= "municip_nor4036") |> 
-  mutate(fylke = case_when(
-    location_code >= "municip_nor3301" & location_code <= "municip_nor3338" ~ "Buskerud",
-    location_code >= "municip_nor3901" & location_code <= "municip_nor3911" ~ "Vestfold",
-    location_code >= "municip_nor4001" & location_code <= "municip_nor4036" ~ "Telemark",
-    TRUE ~ NA_character_
-  ))
+#jentesett
+# Velg målgruppa
+jenter <- df_desc %>%
+  filter(
+    alder == "15-29 år",
+    kjonn == "Kvinner"
+  )
 
 
-# Lag en ny dataframe med kommunenavn og kommunenummer
+jenter_fylke <- jenter %>%
+  filter(fylkesnavn %in% fylker) %>%
+  group_by(tid, fylkesnavn) %>%
+  summarise(
+    # to likeverdige måter—velg én:
 
-kommuner <- tibble(
-  region = c("Drammen", "Kongsberg", "Ringerike", "Hole", "Lier", "Øvre Eiker", "Modum", "Krødsherad", "Flå", "Nesbyen", "Gol", "Hemsedal", "Ål", "Hol", "Sigdal", "Flesberg", "Rollag", "Nore og Uvdal", "Horten", "Holmestrand", "Tønsberg", "Sandefjord", "Larvik", "Færder", "Porsgrunn", "Skien", "Notodden", "Siljan", "Bamble", "Kragerø", "Drangedal", "Nome", "Midt-Telemark", "Seljord", "Hjartdal", "Tinn", "Kviteseid", "Nissedal", "Fyresdal", "Tokke", "Vinje"),
-  Kommunenr = c(3301, 3303, 3305, 3310, 3312, 3314, 3316, 3318, 3320, 3322, 3324, 3326, 3328, 3330, 3332, 3334, 3336, 3338, 3901, 3903, 3905, 3907, 3909, 3911, 4001, 4003, 4005, 4010, 4012, 4014, 4016, 4018, 4020, 4022, 4024, 4026, 4028, 4030, 4032, 4034, 4036)
-)
+    # 1) Bruk hvis du har neet_andel i prosent allerede:
+    neet_pct = weighted.mean(neet_andel, w = tot, na.rm = TRUE),
 
-# Legg til en kolonne med kommunenummer i df basert på location_code
-region_usn <- region_usn %>%
-  mutate(Kommunenr = as.numeric(str_extract(location_code, "\\d{4}")))
+    # 2) Alternativ: regn fra NEET og tot (sikkert riktig uansett):
+    # neet_pct = 100 * sum(NEET, na.rm = TRUE) / sum(tot, na.rm = TRUE),
 
-# Slå sammen df med kommuner for å legge til kommunenavn
-region_usn <- region_usn |> 
-  left_join(kommuner, by = "Kommunenr")
+    .groups = "drop"
+  )
 
-#slå sammen datasettet med neet data"
-df_desc <- left_join(df_long, region_usn)
+jenter_norge <- jenter %>%
+  filter(fylkesnavn == "Norge") %>%
+  group_by(tid) %>%
+  summarise(neet_pct = weighted.mean(neet_andel, w = tot, na.rm = TRUE),
+            .groups = "drop") %>%
+  mutate(fylkesnavn = "Norge")
+
 ```
 
-## column
+```{r}
+df_plot <- bind_rows(ts_fylke, ts_norge) %>%
+  mutate(fylkesnavn = factor(fylkesnavn, levels = c("Buskerud", "Vestfold", "Telemark", "Norge")))
+cols <- c(
+  "Buskerud" = "#0072B2",
+  "Vestfold" = "#009E73",
+  "Telemark" = "#E69F00",  
+  "Norge"    = "darkred"   
+)
+scale_region_colors <- function(name = "Region") {
+  scale_color_manual(values = cols, name = name)
+}
+
+p3 <- df_plot %>%
+  ggplot(aes(x = tid, y = neet_pct, group = fylkesnavn, color = fylkesnavn)) +
+  geom_line(size = 1.2) +
+  geom_point(size = 1.8) +
+  scale_color_viridis_d(end = 0.9, option = "D") +
+  labs(
+    title = "Prosentandel 15–29 år som er NEET (2013–2023)",
+    x = "År", y = "Andel NEET",
+    colour = "Region"
+  ) +
+  scale_y_continuous(labels = label_number(suffix = " %", accuracy = 0.1),
+                     breaks = seq(5, 15, by = 1)) +
+  coord_cartesian(ylim = c(7.5, 15))+
+  theme_classic(base_size = 12) +
+  theme(
+    axis.text.x  = element_text(size = 12,
+                                angle = 45, 
+                                hjust = 1),
+    axis.text.y  = element_text(size = 12),
+    legend.text  = element_text(size = 11),
+    legend.title = element_text(size = 12)
+    )+  
+  scale_region_colors()
+
+
+```
+
+### Alle
 
 ```{r, linje}
-p3 <- df_desc |> 
-  filter(region %in% c("Buskerud", "Vestfold", "Telemark","0 Hele landet")) |>
-  mutate(region = ifelse(region == "0 Hele landet", "Norge", region)) |> 
-  ggplot(aes(x=year, y=neet_tot_prop, group=region, color=region)) +
-  geom_line(size=1)+
-  scale_color_viridis(discrete = TRUE) +
-  ggtitle("Prosentandel 15-29 år som er NEET fra 2013-2023") +
-  labs(x = "År",
-       colour = "Region")+
-  theme_classic() +
-  ylab("Andel NEET")+
-  theme(axis.text.x = element_text(size = 14),
-        axis.text.y = element_text(size = 13),
-        legend.text = element_text(size = 12))
-
-plotly::ggplotly(p3)
+# Interaktivt
+plotly::ggplotly(
+  p3,
+  tooltip = c("tid", "neet_pct")
+)
 ```
+
+```{r}
+df_gutter <- bind_rows(gutter_fylke, gutter_norge) %>%
+  mutate(fylkesnavn = factor(fylkesnavn, levels = c("Buskerud", "Vestfold", "Telemark", "Norge")))
+
+p_gutter <- df_gutter %>%
+  ggplot(aes(x = tid, y = neet_pct, group = fylkesnavn, color = fylkesnavn)) +
+  geom_line(size = 1.2) +
+  geom_point(size = 1.8) +
+  scale_color_viridis_d(end = 0.9, option = "D") +
+  labs(
+    title = "Prosentandel 15–29 år gutter som er NEET (2013–2023)",
+    x = "År", y = "Andel NEET",
+    colour = "Region"
+  ) +
+  scale_y_continuous(labels = label_number(suffix = " %", accuracy = 0.1),
+                     breaks = seq(5, 15, by = 1)) +
+  coord_cartesian(ylim = c(7.5, 15))+
+  theme_classic(base_size = 12) +
+  theme(
+    axis.text.x  = element_text(size = 12,
+                                angle = 45, 
+                                hjust = 1),
+    axis.text.y  = element_text(size = 12),
+    legend.text  = element_text(size = 11),
+    legend.title = element_text(size = 12)
+    )+  
+  scale_region_colors()
+
+```
+
+### Gutter
+
+```{r}
+plotly::ggplotly(
+  p_gutter,
+  tooltip = c("tid", "neet_pct")
+)
+```
+
+```{r}
+df_jenter <- bind_rows(jenter_fylke, jenter_norge) |> 
+  mutate(fylkesnavn = factor(fylkesnavn, levels = c("Buskerud", "Vestfold", "Telemark", "Norge")))
+
+p_jenter <- df_jenter |> 
+  ggplot(aes(x = tid, y = neet_pct, group = fylkesnavn, color = fylkesnavn)) +
+  geom_line(size = 1.2) +
+  geom_point(size = 1.8) +
+  scale_color_viridis_d(end = 0.9, option = "D") +
+  labs(
+    title = "Prosentandel 15–29 år Jenter som er NEET (2013–2023)",
+    x = "År", y = "Andel NEET",
+    colour = "Region"
+  ) +
+  scale_y_continuous(labels = label_number(suffix = " %", accuracy = 0.1),
+                     breaks = seq(5, 15, by = 1)) +
+  coord_cartesian(ylim = c(7.5, 15))+
+  theme_classic(base_size = 12) +
+  theme(
+    axis.text.x  = element_text(size = 12,
+                                angle = 45, 
+                                hjust = 1),
+    axis.text.y  = element_text(size = 12),
+    legend.text  = element_text(size = 11),
+    legend.title = element_text(size = 12)
+    )+  
+  scale_region_colors()
+
+
+```
+
+### Jenter
+
+```{r}
+plotly::ggplotly(
+  p_jenter,
+  tooltip = c("tid", "neet_pct")
+)
+```
+
+## Column {width="10%"}
+
+![](images/collatz_vertical.png){fig-align="right" width="100" height="700"}

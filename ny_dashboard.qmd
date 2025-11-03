@@ -1,5 +1,5 @@
 ---
-title: "Alternative kart med mer detaljer oppdatert med 2024 tall"
+title: "Kart med andel NEET i 2024 blant 15-29 åringer"
 author: Lars Bauger 
 format: 
   dashboard:
@@ -62,9 +62,15 @@ lat <- mean(coords[,2])
 
 #lage riktig popup info
 labels <- sprintf(
-  "<strong>%s</strong><br/>%g%% NEET<br/>Antall NEET: %s<br/>Fylke: %s",
+  "<div style='font-size:13px;'>
+  <strong>%s</strong><br/>
+  %g%% NEET<br/>
+  Total populasjon: %s<br/>
+  Antall NEET: %s<br/>
+  Fylke: %s",
   df_desc_sf_2024$region, 
   df_desc_sf_2024$neet_andel,
+  df_desc_sf_2024$tot,
   df_desc_sf_2024$NEET,
   df_desc_sf_2024$fylkesnavn) |>  
   lapply(htmltools::HTML)
@@ -88,7 +94,7 @@ pal_bin <- colorBin(
   bins = brudd)
 
 
-tvb_kart_neet <- leaflet(df_desc_sf_2024) |> 
+tvb_kart_neet_kontinuerlig <- leaflet(df_desc_sf_2024) |> 
   addTiles() |> 
   setView(lng, lat, zoom = 7) |> 
   addPolygons(fillColor = ~pal(neet_andel),
@@ -105,14 +111,35 @@ tvb_kart_neet <- leaflet(df_desc_sf_2024) |>
             values = ~neet_andel, title = "Andel NEET 15-29 år i 2024",
             opacity = 0.7)
 
+tvb_kart_neet_kategorisk <- leaflet(df_desc_sf_2024) |> 
+  addTiles() |> 
+  setView(lng, lat, zoom = 7) |> 
+  addPolygons(fillColor = ~pal_bin(neet_andel),
+              stroke = TRUE, 
+              fillOpacity = 0.7,
+              opacity = 0.2,
+              color = "white",
+              label = labels,
+              dashArray = "3",
+              highlight = highlightOptions(weight = 5,
+                                           color = "#666", 
+                                           bringToFront = TRUE)) |> 
+  addLegend("bottomright", pal = pal_bin, 
+            values = ~neet_andel, title = "Andel NEET 15-29 år i 2024",
+            opacity = 0.7)
 
 ```
 
-## column
+## column {.tabset}
 
 ```{r}
-#| title: Kart som viser andel av hele befolkningen blant 15-29 år som kan klassifiseres som NEET
-tvb_kart_neet
+#| title: Kart 1, Andel NEET blant 15-29 år (hele populasjonen) - Kontinuerlig fargeskala (relativ til min–maks)
+tvb_kart_neet_kontinuerlig
+```
+
+```{r}
+#| title: Kart 2, Andel NEET blant 15-29 år (hele populasjonen) - Trinnvis fargeskala (intervaller)
+tvb_kart_neet_kategorisk
 ```
 
 ```{r}
@@ -134,9 +161,15 @@ lat_inn <- mean(coords_inn[,2])
 
 #lage riktig popup info
 labels <- sprintf(
-  "<strong>%s</strong><br/>%g%% NEET<br/>Antall NEET: %s<br/>Fylke: %s",
+  "<div style='font-size:13px;'>
+  <strong>%s</strong><br/>
+  %g%% NEET<br/>
+  Total populasjon innvandrere: %s<br/>
+  Antall NEET blant innvandrere: %s<br/>
+  Fylke: %s",
   df_innv_sf_2024$region, 
   df_innv_sf_2024$neet_andel.y,
+  df_innv_sf_2024$tot,
   df_innv_sf_2024$NEET,
   df_innv_sf_2024$fylkesnavn) |>  
   lapply(htmltools::HTML)
@@ -201,11 +234,11 @@ tvb_kart_neet_innvand_continious <- leaflet(df_innv_sf_2024) |>
 ## column {.tabset}
 
 ```{r}
-#| title: Kart 1, Andel NEET blant innvandringsbefolkningen
-tvb_kart_neet_innvand_bin
+#| title: Kart 1, Andel NEET blant 15-29 år i innvandringsbefolkningen - Kontinuerlig fargeskala (relativ til min–maks)
+tvb_kart_neet_innvand_continious
 ```
 
 ```{r}
-#| title: Kart 2, Andel NEET blant innvandringsbefolkningen
-tvb_kart_neet_innvand_continious
+#| title: Kart 2, Andel NEET blant 15-29 år i innvandringsbefolkningen - Trinnvis fargeskala (intervaller)
+tvb_kart_neet_innvand_bin
 ```

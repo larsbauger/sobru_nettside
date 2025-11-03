@@ -1,16 +1,16 @@
 ---
-title: "Sankey"
+title: "Utvikling over tid - begynnende analyse av registerdata"
 bibliography: references.bib
 ---
 
-Her har vi tatt utganspunkt i personer fra Buskerud, Vestfold og Telemark som var mellom 21 og 25 år i 2018 og fulgt deres innenfor/utenfor status i henhold til NEET klassifiseringen. Dataene som benyttes her kommer fra microdata.no som er en tjeneste som gir tilgang til registerdata uten å søke til forskningsinstitusjoner. Microdata gir tilgang til et bredt utvalg av registerdata. For å beregne NEET status eller innenfor/utenforsskap har vi benyttet flere registerdata i kombinasjon. I dette arbeidet av Jon Olav Sliper [@ungetrø; @josliper] sitt arbeid i Trøndelag fylkeskommune vært sentralt .
+Her har vi tatt utgangspunkt i personer fra Buskerud, Vestfold og Telemark som var mellom 21 og 25 år i 2018 og fulgt deres innenfor/utenfor status i henhold til NEET klassifiseringen. Dataene som benyttes her kommer fra microdata.no som er en tjeneste som gir tilgang til registerdata uten å søke til forskningsinstitusjoner. Microdata gir tilgang til et bredt utvalg av registerdata. For å beregne NEET status eller innenfor/utenforsskap har vi benyttet flere registerdata i kombinasjon. I dette arbeidet av Jon Olav Sliper [@ungetrø; @josliper] sitt arbeid i Trøndelag fylkeskommune vært sentralt .
 
-Basert på dette og manualen som finnes på microdata.no beregnet vi hvert år hvorvidt de har en tilknytning til arbeidslivet/utdanning/arbeidsmarkedstiltak. Nedenfor har vi valgt å bruke begrepet innenfor og utenfor som begrep for non-NEET og NEET. Dette er rett og slett fordi vi opplever at det fuyngerer bedre når vi skal snakke om flyt inn og ut av kategorien. I klassifiseringen innenfor/utenfor har vi kategorisert det som innenfor dersom man var tilknyttet en eller flere av disse kategoriene i det respektive året. Registervariablene som ble benyttet er beskrevet i tabbelen i tabellen under.
+Basert på dette og manualen som finnes på microdata.no beregnet vi hvert år hvorvidt de har en tilknytning til arbeidslivet/utdanning/arbeidsmarkedstiltak. Nedenfor har vi valgt å bruke begrepet innenfor og utenfor som begrep for non-NEET og NEET. Dette er rett og slett fordi vi opplever at det fungerer bedre når vi skal snakke om bevegelse inn og ut av en slik kategorisering/klassifisering. I klassifiseringen innenfor/utenfor nedenfor, har vi kategorisert personer innenfor dersom de var tilknyttet en eller flere av disse kategoriene i det respektive året. Registervariablene som ble benyttet er beskrevet i tabbelen i tabellen under.
 
 | Kategori | Variabel | Innenfor dersom noen av kriteriene under var tilfredsstilt |
 |------------------------|------------------------|------------------------|
-| Arbeid | REGSYS_ARB_ARBMARK_STATUS i referansemåned (nov) | Lønnstaker /selvstendig næringsdrivende |
-| Utdanning | NUDB_KURS_NUS eller INNTEKT_STUDIESTIPEND | Registrert med utdanning i løpet av året eller Studiestipend over 0 |
+| Arbeid | REGSYS_ARB_ARBMARK_STATUS i referansemåned (nov) | Lønnstaker /selvstendig næringsdrivende i referanse måned (November) |
+| Utdanning | NUDB_KURS_NUS eller INNTEKT_STUDIESTIPEND | Registrert med utdanning i løpet av året eller studiestipend over 0 |
 | Tiltak | ARBEIDSSOKER_TILTAK i referansemåned (nov) | Arbeidssøker på tiltak/nedsatt arbeidsevne på tiltak |
 
 ## Utvikling over tid

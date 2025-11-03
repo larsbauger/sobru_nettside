@@ -71,6 +71,7 @@ df_med_kommuner_fullstendig <- df_med_kommuner |>
     # TELEMARK
     gammel %in% c("0822", "0821") ~ "Telemark",
     region %in% c("Midt-Telemark") ~ "Telemark",
+    komnr == "0821" ~ "Telemark",
     
     # TRØNDELAG
     gammel %in% c("1601", "5025") ~ "Trøndelag",
@@ -87,14 +88,16 @@ df_med_kommuner_fullstendig <- df_med_kommuner |>
     
     # AKERSHUS
     region %in% c("Rygge", "Nes (Akershus)", "Hobøl", "Ski", "Oppegård", "Lillestrøm", "Sørum", "Fet", "Skedsmo",
-                  "Nordre Follo", "Nes", "Nesbyen", "Os") ~ "Akershus",
+                  "Nordre Follo", "Nes", "Os") ~ "Akershus",
     
     # BUSKERUD
     region %in% c("Nedre Eiker", "Røyken", "Hurum", "Svelvik", "Nes (Buskerud)") ~ "Buskerud",
+    komnr %in% c("3040", "3322") ~ "Buskerud",
     
     # VESTFOLD
-    region %in% c("Hof", "Re", "Andebu", "Stokke", "Nøtterøy", "Tjøme", "Færder", "Sande (Vestfold)",
-                  "Sande", "Lardal", "Bø") ~ "Vestfold",
+    region %in% c("Hof", "Re", "Andebu", "Stokke", "Nøtterøy", "Tjøme", "Færder",
+                   "Lardal") ~ "Vestfold",
+    komnr =="0713" ~ "Vestfold",
     
     # AGDER
     region %in% c("Mandal", "Songdalen", "Søgne", "Marnardal", "Audnedal") ~ "Agder",
@@ -110,6 +113,7 @@ df_med_kommuner_fullstendig <- df_med_kommuner |>
     # MØRE OG ROMSDAL
     region %in% c("Ørskog", "Norddal", "Sande (Møre og Romsdal)", "Stordal", "Skodje", "Herøy (Møre og Romsdal)",
                   "Nesset", "Midsund", "Sandøy", "Fræna", "Eide", "Halsa", "Herøy", "Fjord", "Hustadvika") ~ "Møre og Romsdal",
+    komnr =="1514" ~ "Møre og Romsdal",
     
     # FINNMARK
     region %in% c("Porsanger - Porsángu - Porsanki", "Kárásjohka - Karasjok", "Kárá?johka - Karasjok",
@@ -126,8 +130,8 @@ df_med_kommuner_fullstendig <- df_med_kommuner |>
                   "Divtasvuodna - Tysfjord", "Ballangen", "Hamarøy - Hábmer", "Evenes - Evenássi", "Hattfjelldal",
                   "Fauske", "Hamarøy", "Tysfjord", "Evenes", "Aarborte - Hattfjelldal", "Fauske - Fuossko",
                   "Sortland - Suortá", "Hábmer - Hamarøy") ~ "Nordland",
+    komnr == "1867" ~ "Nordland",
     region == "Hele landet"  ~ "Norge",
-    
     TRUE ~ fylkesnavn))
 
 df_med_kommuner_fullstendig |>
@@ -161,6 +165,96 @@ df_fullstendig_ryddet <- df_fullstendig_ryddet |>
 
 saveRDS(df_fullstendig_ryddet, here::here("data/kjonn_neet"))
 
+
+# lage datasett med kartinfo
+df_kjonn_clean <- df_fullstendig_ryddet |>
+  filter(!is.na(komnr)) |>
+  mutate(tid = as.integer(tid),
+         neet_andel = round(neet_andel, 2)
+  )
+df_insp <- df_fullstendig_ryddet |> 
+  filter(region == "Bø")
+
+
+
+#LAge kart over regionen----
+library(csmaps)
+library(sf)
+df_kjonn_clean |> 
+  filter(region == "Porsgrunn",
+         kjonn == "Begge kjønn",
+         alder == "15-29 år") |>
+  arrange(tid) |> 
+  print()
+
+norway_2024 <-  csmaps::nor_municip_map_b2024_default_sf |> 
+  mutate(komnr = str_extract(location_code, "\\d{4}"))
+norway_2020 <-  csmaps::nor_municip_map_b2020_default_sf |> 
+  mutate(komnr = str_extract(location_code, "\\d{4}"))
+norway_2019 <-  csmaps::nor_municip_map_b2019_default_sf |> 
+  mutate(komnr = str_extract(location_code, "\\d{4}"))
+
+
+kart_2024 <- norway_2024 |> 
+  left_join(df_kjonn_clean, by = "komnr")
+kart_2020 <- norway_2020 |> 
+  left_join(df_kjonn_clean, by = "komnr")
+kart_2019 <- norway_2019 |> 
+  left_join(df_kjonn_clean, by = "komnr")
+kart_2020 |>
+  filter(region == "Porsgrunn",
+         kjonn == "Begge kjønn",
+         alder == "15-29 år") |>
+  arrange(tid) |> 
+  print()
+
+
+library(dplyr)
+library(sf)
+
+# 1) Finn felles kolonner (så rbind ikke feiler)
+common_cols <- Reduce(intersect, list(
+  names(kart_2019),
+  names(kart_2020),
+  names(kart_2024)
+))
+
+# 2) Forbered hvert kart: velg samme kolonner, merk med grenseår,
+#    valider geometri og harmoniser CRS
+prep_kart <- function(x, grense_ar, target_crs = 4326) {
+  x %>%
+    select(all_of(common_cols)) %>%
+    mutate(grense_ar = grense_ar, .before = 1) %>%
+    st_make_valid() %>%
+    st_transform(target_crs)
+}
+
+# Velg en felles CRS – her bruker jeg WGS84 (EPSG:4326) for enkelhet
+target_crs <- 4326
+
+k19 <- prep_kart(kart_2019, 2019, target_crs)
+k20 <- prep_kart(kart_2020, 2020, target_crs)
+k24 <- prep_kart(kart_2024, 2024, target_crs)
+
+# 3) Radbind (sf har egen rbind-metode, dette bevarer geometrien)
+major <- do.call(rbind, list(k19, k20, k24))
+
+# Sjekk raskt
+
+
+major |> 
+  filter(region == "Porsgrunn",
+         kjonn == "Begge kjønn",
+         alder == "15-29 år") |> 
+  arrange(tid) |> 
+  print(n = Inf)
+
+#lagre dataset
+saveRDS(major, here::here("data/kart_fullstendig"))
+
+sobru_reg <- major |> 
+  filter(fylkesnavn %in% c("Telemark", "Buskerud", "Vestfold"))
+saveRDS(sobru_reg, here::here("data/kart_sobru_reg"))
 
 ## Innvandring
 # Sjekk hvilke Region-verdier som er gyldige
