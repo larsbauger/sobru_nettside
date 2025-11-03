@@ -13,7 +13,7 @@ library(viridis)
 Sys.setlocale(locale = 'no_NB.utf8')
 ```
 
-## Column {.tabset width="90%"}
+## Column {.tabset}
 
 ```{r, laste data}
 # få data inn
@@ -256,7 +256,3 @@ plotly::ggplotly(
   tooltip = c("tid", "neet_pct")
 )
 ```
-
-## Column {width="10%"}
-
-![](images/collatz_vertical.png){fig-align="right" width="100" height="700"}
