@@ -18,7 +18,21 @@
     "href": "index.html",
     "title": "Sosial bærekraft og redusert utenforsskap (SOBRU)",
     "section": "",
-    "text": "Velkommen\nDette er en nettside som utvikles for å finne gode måter å formidle arbeidet som gjøres i de forskjellige arbeidspakkene. Man kan navigere til de forskjellige sidene på venstre side. Foreløpig er det ikke mye informasjon her, men det kan komme etterhvert.\nEn oversikt over hvor mange som kategoriseres som NEET i vår region fordelt på fylkene og kommuner kan man finne på fanen over som heter NEET i vår region.\nMer informasjon om prosjektet i sin helhet kan man finne på SOBRU sin USN side."
+    "text": "Dette er en nettside som utvikles for å finne gode måter å formidle arbeidet som gjøres i de forskjellige arbeidspakkene. Man kan navigere til de forskjellige sidene med informasjon ved å trykke på fanene på toppen av siden. Foreløpig er det informasjon og resultater fra arbeidspakke 1 som er her, men dette kan utvikle seg over tid.\n\n\nEn oversikt over hvor mange som kategoriseres som NEET i vår region fordelt på fylkene og kommuner kan man finne på fanen over som heter NEET i vår region. For å illustrere forskjeller og likheter mellom kommunene så har vi også illustrert dette i flere forskjellige kart. Under fanen Kart vil man få opp to forskjellige kart som illustrerer andel NEET blant alle unge (15-29 år) og andel NEET blant personer med innvandringsbakgrunn. Under fanen Interaktivt kart med shiny vil det også være mulig å filtrere dataene på kommune, kjønn og alder. Vi har også laget en illustrasjon over hvordan andelen NEET har utviklet seg i perioden 2008-2024, og denne figuren finnes under fanen Utvikling over tid. En del av prosjektet vil også gjøre dypdykk i enkelte fødselsår og følge de over en lengre periode, for å identifisere hvor mange som er langvarig NEET og hvor mange som kommer seg ut av den kategorien. Noen tidlige funn og illustrasjoner av dette arbeidet kan finnes under fanen Flytskjema\n\n\n\nI dette arbeidet benyttes statistikk fra Statistisk Sentralbyrå (SSB) med tabell 13556 (SSB 2025a) og tabell 135563 (SSB 2025b) som sentrale datakilder. Her har vi benyttet SSB sin api-løsning PxWebApi (Langsrud et al. 2025) og statistikkprogrammet R (R Core Team 2023).\nMer informasjon om prosjektet i sin helhet kan man finne på SOBRU sin USN side."
+  },
+  {
+    "objectID": "index.html#beskrivelse-av-innhold-på-siden",
+    "href": "index.html#beskrivelse-av-innhold-på-siden",
+    "title": "Sosial bærekraft og redusert utenforsskap (SOBRU)",
+    "section": "",
+    "text": "En oversikt over hvor mange som kategoriseres som NEET i vår region fordelt på fylkene og kommuner kan man finne på fanen over som heter NEET i vår region. For å illustrere forskjeller og likheter mellom kommunene så har vi også illustrert dette i flere forskjellige kart. Under fanen Kart vil man få opp to forskjellige kart som illustrerer andel NEET blant alle unge (15-29 år) og andel NEET blant personer med innvandringsbakgrunn. Under fanen Interaktivt kart med shiny vil det også være mulig å filtrere dataene på kommune, kjønn og alder. Vi har også laget en illustrasjon over hvordan andelen NEET har utviklet seg i perioden 2008-2024, og denne figuren finnes under fanen Utvikling over tid. En del av prosjektet vil også gjøre dypdykk i enkelte fødselsår og følge de over en lengre periode, for å identifisere hvor mange som er langvarig NEET og hvor mange som kommer seg ut av den kategorien. Noen tidlige funn og illustrasjoner av dette arbeidet kan finnes under fanen Flytskjema"
+  },
+  {
+    "objectID": "index.html#datakilder",
+    "href": "index.html#datakilder",
+    "title": "Sosial bærekraft og redusert utenforsskap (SOBRU)",
+    "section": "",
+    "text": "I dette arbeidet benyttes statistikk fra Statistisk Sentralbyrå (SSB) med tabell 13556 (SSB 2025a) og tabell 135563 (SSB 2025b) som sentrale datakilder. Her har vi benyttet SSB sin api-løsning PxWebApi (Langsrud et al. 2025) og statistikkprogrammet R (R Core Team 2023).\nMer informasjon om prosjektet i sin helhet kan man finne på SOBRU sin USN side."
   },
   {
     "objectID": "about.html",

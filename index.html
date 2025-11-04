@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -104,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./ny_dashboard.html"> 
-<span class="menu-text">Interaktivt kart</span></a>
+<span class="menu-text">Kart</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./shiny.html"> 
@@ -141,7 +161,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#velkommen" id="toc-velkommen" class="nav-link active" data-scroll-target="#velkommen">Velkommen</a></li>
+  <li><a href="#velkommen" id="toc-velkommen" class="nav-link active" data-scroll-target="#velkommen">Velkommen</a>
+  <ul class="collapse">
+  <li><a href="#beskrivelse-av-innhold-på-siden" id="toc-beskrivelse-av-innhold-på-siden" class="nav-link" data-scroll-target="#beskrivelse-av-innhold-på-siden">Beskrivelse av innhold på siden</a></li>
+  <li><a href="#datakilder" id="toc-datakilder" class="nav-link" data-scroll-target="#datakilder">Datakilder</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -169,14 +193,35 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="velkommen" class="level1">
 <h1>Velkommen</h1>
-<p>Dette er en nettside som utvikles for å finne gode måter å formidle arbeidet som gjøres i de forskjellige arbeidspakkene. Man kan navigere til de forskjellige sidene på venstre side. Foreløpig er det ikke mye informasjon her, men det kan komme etterhvert.</p>
-<p>En oversikt over hvor mange som kategoriseres som NEET i vår region fordelt på fylkene og kommuner kan man finne på fanen over som heter <code>NEET i vår region</code>.</p>
+<p>Dette er en nettside som utvikles for å finne gode måter å formidle arbeidet som gjøres i de forskjellige arbeidspakkene. Man kan navigere til de forskjellige sidene med informasjon ved å trykke på fanene på toppen av siden. Foreløpig er det informasjon og resultater fra arbeidspakke 1 som er her, men dette kan utvikle seg over tid.</p>
+<section id="beskrivelse-av-innhold-på-siden" class="level2">
+<h2 class="anchored" data-anchor-id="beskrivelse-av-innhold-på-siden">Beskrivelse av innhold på siden</h2>
+<p>En oversikt over hvor mange som kategoriseres som NEET i vår region fordelt på fylkene og kommuner kan man finne på fanen over som heter <a href="https://larsbauger.github.io/sobru_nettside/infograf.html"><code>NEET i vår region</code></a>. For å illustrere forskjeller og likheter mellom kommunene så har vi også illustrert dette i flere forskjellige kart. Under fanen <a href="https://larsbauger.github.io/sobru_nettside/ny_dashboard.html"><code>Kart</code></a> vil man få opp to forskjellige kart som illustrerer andel NEET blant alle unge (15-29 år) og andel NEET blant personer med innvandringsbakgrunn. Under fanen <a href="https://larsbauger.github.io/sobru_nettside/shiny.html"><code>Interaktivt kart med shiny</code></a> vil det også være mulig å filtrere dataene på kommune, kjønn og alder. Vi har også laget en illustrasjon over hvordan andelen NEET har utviklet seg i perioden 2008-2024, og denne figuren finnes under fanen <a href="https://larsbauger.github.io/sobru_nettside/info2.html"><code>Utvikling over tid</code></a>. En del av prosjektet vil også gjøre dypdykk i enkelte fødselsår og følge de over en lengre periode, for å identifisere hvor mange som er langvarig NEET og hvor mange som kommer seg ut av den kategorien. Noen tidlige funn og illustrasjoner av dette arbeidet kan finnes under fanen <a href="https://larsbauger.github.io/sobru_nettside/sankey.html"><code>Flytskjema</code></a></p>
+</section>
+<section id="datakilder" class="level2">
+<h2 class="anchored" data-anchor-id="datakilder">Datakilder</h2>
+<p>I dette arbeidet benyttes statistikk fra Statistisk Sentralbyrå (SSB) med tabell 13556 <span class="citation" data-cites="ssb2025a">(<a href="#ref-ssb2025a" role="doc-biblioref">SSB 2025a</a>)</span> og tabell 135563 <span class="citation" data-cites="ssb2025b">(<a href="#ref-ssb2025b" role="doc-biblioref">SSB 2025b</a>)</span> som sentrale datakilder. Her har vi benyttet SSB sin api-løsning <code>PxWebApi</code> <span class="citation" data-cites="langsrud2025">(<a href="#ref-langsrud2025" role="doc-biblioref">Langsrud et al. 2025</a>)</span> og statistikkprogrammet R <span class="citation" data-cites="rcoreteam2023">(<a href="#ref-rcoreteam2023" role="doc-biblioref">R Core Team 2023</a>)</span>.</p>
 <p>Mer informasjon om prosjektet i sin helhet kan man finne på <a href="https://www.usn.no/forskning/prosjekter/andre-prosjekter/sosial-baerekraft-og-redusert-utenforskap/">SOBRU sin USN side</a>.</p>
 
 
+
+</section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-langsrud2025" class="csl-entry" role="listitem">
+Langsrud, Øyvind, Jan Bruusgaard, Solveig Bjørkholt, and Susie Jentoft. 2025. <em>PxWebApiData: PX-Web Data by API</em>. <a href="https://cran.r-project.org/web/packages/PxWebApiData/index.html">https://cran.r-project.org/web/packages/PxWebApiData/index.html</a>.
+</div>
+<div id="ref-rcoreteam2023" class="csl-entry" role="listitem">
+R Core Team. 2023. <em>R: A Language and Environment for Statistical Computing.</em> Vienna, Austria: R Foundation for Statistical Computing.
+</div>
+<div id="ref-ssb2025a" class="csl-entry" role="listitem">
+SSB. 2025a. <span>“13556: Kommunefordelt arbeidsstyrkestatus (inkl. NEET) for personer 15-29 år, etter bosted, alder og kjønn (K) 2008 - 2023.”</span> <a href="https://www.ssb.no/statbank/table/13556">https://www.ssb.no/statbank/table/13556</a>.
+</div>
+<div id="ref-ssb2025b" class="csl-entry" role="listitem">
+———. 2025b. <span>“13563: Kommunefordelt arbeidsstyrkestatus (inkl. NEET) for personer 15 år og eldre, etter bosted, alder og innvandringskategori (K) 2008 - 2023.”</span> <a href="https://www.ssb.no/statbank/table/13563">https://www.ssb.no/statbank/table/13563</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
