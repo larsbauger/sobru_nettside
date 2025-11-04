@@ -1,11 +1,18 @@
 ---
 title: "Sosial bærekraft og redusert utenforsskap (SOBRU)"
+bibliography: references.bib
 ---
 
 # Velkommen
 
-Dette er en nettside som utvikles for å finne gode måter å formidle arbeidet som gjøres i de forskjellige arbeidspakkene. Man kan navigere til de forskjellige sidene på venstre side. Foreløpig er det ikke mye informasjon her, men det kan komme etterhvert.
+Dette er en nettside som utvikles for å finne gode måter å formidle arbeidet som gjøres i de forskjellige arbeidspakkene. Man kan navigere til de forskjellige sidene med informasjon ved å trykke på fanene på toppen av siden. Foreløpig er det informasjon og resultater fra arbeidspakke 1 som er her, men dette kan utvikle seg over tid.
 
-En oversikt over hvor mange som kategoriseres som NEET i vår region fordelt på fylkene og kommuner kan man finne på fanen over som heter `NEET i vår region`.
+## Beskrivelse av innhold på siden
+
+En oversikt over hvor mange som kategoriseres som NEET i vår region fordelt på fylkene og kommuner kan man finne på fanen over som heter [`NEET i vår region`](https://larsbauger.github.io/sobru_nettside/infograf.html). For å illustrere forskjeller og likheter mellom kommunene så har vi også illustrert dette i flere forskjellige kart. Under fanen [`Kart`](https://larsbauger.github.io/sobru_nettside/ny_dashboard.html) vil man få opp to forskjellige kart som illustrerer andel NEET blant alle unge (15-29 år) og andel NEET blant personer med innvandringsbakgrunn. Under fanen [`Interaktivt kart med shiny`](https://larsbauger.github.io/sobru_nettside/shiny.html) vil det også være mulig å filtrere dataene på kommune, kjønn og alder. Vi har også laget en illustrasjon over hvordan andelen NEET har utviklet seg i perioden 2008-2024, og denne figuren finnes under fanen [`Utvikling over tid`](https://larsbauger.github.io/sobru_nettside/info2.html). En del av prosjektet vil også gjøre dypdykk i enkelte fødselsår og følge de over en lengre periode, for å identifisere hvor mange som er langvarig NEET og hvor mange som kommer seg ut av den kategorien. Noen tidlige funn og illustrasjoner av dette arbeidet kan finnes under fanen [`Flytskjema`](https://larsbauger.github.io/sobru_nettside/sankey.html)
+
+## Datakilder
+
+I dette arbeidet benyttes statistikk fra Statistisk Sentralbyrå (SSB) med tabell 13556 [@ssb2025a] og tabell 135563 [@ssb2025b] som sentrale datakilder. Her har vi benyttet SSB sin api-løsning `PxWebApi` [@langsrud2025] og statistikkprogrammet R [@rcoreteam2023].
 
 Mer informasjon om prosjektet i sin helhet kan man finne på [SOBRU sin USN side](https://www.usn.no/forskning/prosjekter/andre-prosjekter/sosial-baerekraft-og-redusert-utenforskap/).

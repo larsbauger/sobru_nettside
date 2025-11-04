@@ -17,7 +17,7 @@ website:
       - href: infograf.qmd
         text: NEET i vår region
       - href: ny_dashboard.qmd
-        text: Interaktivt kart
+        text: Kart
       - href: shiny.qmd
         text: Interaktivt kart med shiny
       - href: info2.qmd
