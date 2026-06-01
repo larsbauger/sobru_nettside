@@ -12,6 +12,8 @@ website:
   navbar:
     logo: "img/USN_lilla.png"
     left:
+      - href: about.qmd
+        text: Om
       - href: index.qmd
         text: Hjem
       - href: infograf.qmd
@@ -24,8 +26,6 @@ website:
         text: Utvikling over tid
       - href: sankey.qmd
         text: Flytskjema
-      - href: about.qmd
-        text: Om
       - href: konferanse.qmd
         text: Konferansebidrag
        
