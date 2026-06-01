@@ -41,7 +41,7 @@ jobs:
           key: r-pkgs-v1
           restore-keys: r-pkgs-
 
-      - name: Install R packages
+            - name: Install R packages
         run: |
           install.packages(c(
             "tidyverse", "ggplot2", "plotly", "leaflet",
@@ -50,7 +50,8 @@ jobs:
             "reactable", "gt", "ggiraph", "crosstalk",
             "PxWebApiData", "janitor", "here", "eurostat",
             "bslib", "htmlwidgets", "shiny", "httr2",
-            "hrbrthemes", "viridis", "scales", "RColorBrewer"
+            "hrbrthemes", "viridis", "scales", "RColorBrewer",
+            "ggsci"
           ))
         shell: Rscript {0}
 
