@@ -4,19 +4,18 @@ title: "Konferansebidrag"
 
 ## Muntlig presentasjon – Helsinki 2025
 
-**Title: Loneliness in Young Adults: The Role of NEET Status and Social Determinants in Norway**   
+**Title: Loneliness in Young Adults: The Role of NEET Status and Social Determinants in Norway**\
 **The 18th European Public Health Conference**, Helsinki, Finland, 11 – 14 November 2025
 
 ```{=html}
 <iframe src="doc/oral_helsinki.pdf" width="100%" height="800px"></iframe>
-``` 
+```
 
 ## Poster – Harstad 2026
 
-**Title: Pathways Out of NEET: Profiling Young Adults Using Registry Data**   
+**Title: Pathways Out of NEET: Profiling Young Adults Using Registry Data**\
 **The 11th Nordic Health Promotion Research Conference**, Harstad, Norway 10.06.2026-12.06.2026
 
 ```{=html}
 <iframe src="doc/poster_harstad.pdf" width="100%" height="800px"></iframe>
 ```
-
