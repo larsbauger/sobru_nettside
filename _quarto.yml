@@ -26,6 +26,8 @@ website:
         text: Flytskjema
       - href: about.qmd
         text: Om
+      - href: konferanse.qmd
+        text: Konferansebidrag
        
 
 format:
