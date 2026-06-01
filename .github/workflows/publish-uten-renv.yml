@@ -41,7 +41,7 @@ jobs:
           key: r-pkgs-v1
           restore-keys: r-pkgs-
 
-            - name: Install R packages
+      - name: Install R packages
         run: |
           install.packages(c(
             "tidyverse", "ggplot2", "plotly", "leaflet",
