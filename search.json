@@ -56,6 +56,34 @@
     "text": "Poster – Harstad 2026\nTitle: Pathways Out of NEET: Profiling Young Adults Using Registry Data\nThe 11th Nordic Health Promotion Research Conference, Harstad, Norway 10.06.2026-12.06.2026"
   },
   {
+    "objectID": "europa_neet.html",
+    "href": "europa_neet.html",
+    "title": "NEET i Europa",
+    "section": "",
+    "text": "Unge som verken er i utdanning, arbeid eller opplæring (NEET) er et begrep som brukes på tvers av landegrenser for å beskrive og måle utenforskap blant unge. Mange europeiske land følger utviklingen tett, og internasjonal sammenligning gir verdifull kontekst for å forstå hvor Norge står.\nFor slike sammenligninger benyttes gjerne Eurostat, som samler harmoniserte tall fra alle EU- og EØS-land basert på Arbeidskraftundersøkelsen (AKU), som er en månedlig spørreundersøkelse som publiseres som kvartalsvise gjennomsnitt. Det er verdt å merke seg at AKU-baserte tall avviker noe fra SSBs registerbaserte NEET-tall, som dekker hele befolkningen. SOBRU-prosjektets egne analyser benytter registerdata og er ikke direkte sammenlignbare med tallene vist her. Til tross for dette er Eurostat-tallene godt egnet for å belyse trender og forskjeller mellom land over tid.\nFigurene under viser hvordan NEET-andelen har utviklet seg i Norge og utvalgte europeiske land siden 2005. Tallene reflekterer store hendelser som finanskrisen i 2008–2009 og koronapandemien i 2020–2021, men avdekker også dype strukturelle forskjeller mellom land."
+  },
+  {
+    "objectID": "europa_neet.html#langsiktig-utvikling",
+    "href": "europa_neet.html#langsiktig-utvikling",
+    "title": "NEET i Europa",
+    "section": "Langsiktig utvikling",
+    "text": "Langsiktig utvikling\nNorge ligger konsistent blant landene med lavest NEET-andel i Europa. De nordiske landene ligger samlet godt under EU-snittet, mens Italia har opplevd vedvarende og svært høye andeler — over 20 prosent gjennom store deler av 2010-tallet.\n\n\n\n\n\n\nHold musepekeren over linjene for å se eksakte verdier."
+  },
+  {
+    "objectID": "europa_neet.html#siste-tall-rangering",
+    "href": "europa_neet.html#siste-tall-rangering",
+    "title": "NEET i Europa",
+    "section": "Siste tall: rangering",
+    "text": "Siste tall: rangering\nTabellen under viser NEET-andelen for de utvalgte landene i 2025, rangert fra lavest til høyest.\n\n\n\n\n\n\n\n\nLand\nNEET-andel 2025 (%)\n\n\n\n\nNederland\n5.3\n\n\nSverige\n5.9\n\n\nNorge\n7.0\n\n\nDanmark\n8.9\n\n\nEU27\n11.0\n\n\nFinland\n11.2\n\n\nSpania\n11.5\n\n\nItalia\n13.3\n\n\n\nKilde: Eurostat (edat_lfse_20), alder 15–29 år"
+  },
+  {
+    "objectID": "europa_neet.html#hva-forklarer-de-store-forskjellene",
+    "href": "europa_neet.html#hva-forklarer-de-store-forskjellene",
+    "title": "NEET i Europa",
+    "section": "Hva forklarer de store forskjellene?",
+    "text": "Hva forklarer de store forskjellene?\nVariasjonen i NEET-rater på tvers av Europa henger sammen med flere strukturelle faktorer. Land med sterke velferdsstater, aktive arbeidsmarkedstiltak og gode utdanningssystemer, slik som de nordiske landene og Nederland har gjennomgående lave andeler. Italia og Spania har historisk slitt med høy ungdomsledighet og svake institusjonelle sikkerhetsnettverk for unge som faller utenfor.\nFinanskrisen i 2008–2009 rammet alle land, men effekten var særlig langvarig i Sør-Europa. Norge opplevde en begrenset økning og hentet seg raskt inn igjen, mye på grunn av oljefondet og aktiv sysselsettingspolitikk. Koronapandemien i 2020 ga et nytt, kortvarig hopp i de fleste land.\n\n\n\n\n\n\n\nNote\n\n\n\nTallene hentes automatisk fra Eurostat og oppdateres hver gang siden bygges. Årstall fra edat_lfse_20, kvartalstall fra lfsi_neet_q (sesongjustert)."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Om",
