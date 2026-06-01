@@ -1,26 +1,5 @@
 [
   {
-    "objectID": "sankey.html",
-    "href": "sankey.html",
-    "title": "Utvikling over tid - begynnende analyse av registerdata",
-    "section": "",
-    "text": "Her har vi tatt utgangspunkt i personer fra Buskerud, Vestfold og Telemark som var mellom 21 og 25 år i 2018 og fulgt deres innenfor/utenfor status i henhold til NEET klassifiseringen. Dataene som benyttes her kommer fra microdata.no som er en tjeneste som gir tilgang til registerdata uten å søke til forskningsinstitusjoner. Microdata gir tilgang til et bredt utvalg av registerdata. For å beregne NEET status eller innenfor/utenforsskap har vi benyttet flere registerdata i kombinasjon. I dette arbeidet av Jon Olav Sliper (Unge Trøndere Utenfor Arbeid, Utdanning Og Arbeidsmarkedstiltak i 2023 | Trøndelag i Tall, n.d.; JOSliper, n.d.) sitt arbeid i Trøndelag fylkeskommune vært sentralt .\nBasert på dette og manualen som finnes på microdata.no beregnet vi hvert år hvorvidt de har en tilknytning til arbeidslivet/utdanning/arbeidsmarkedstiltak. Nedenfor har vi valgt å bruke begrepet innenfor og utenfor som begrep for non-NEET og NEET. Dette er rett og slett fordi vi opplever at det fungerer bedre når vi skal snakke om bevegelse inn og ut av en slik kategorisering/klassifisering. I klassifiseringen innenfor/utenfor nedenfor, har vi kategorisert personer innenfor dersom de var tilknyttet en eller flere av disse kategoriene i det respektive året. Registervariablene som ble benyttet er beskrevet i tabbelen i tabellen under."
-  },
-  {
-    "objectID": "sankey.html#utvikling-over-tid",
-    "href": "sankey.html#utvikling-over-tid",
-    "title": "Utvikling over tid - begynnende analyse av registerdata",
-    "section": "Utvikling over tid",
-    "text": "Utvikling over tid\nUnder er et flytdiagram (et såkalt Sankey diagram) som viser hvordan statusen utvikler seg over disse fem årene. i 2018 er det 12,4 % av de mellom 21-25 som klassifiseres som utenfor, mens dette tallet er sunket noe i 2023, hvor 11,6 % ble klassifisert som utenfor.\n\n\nUtvikling blant de som var utenfor i 2018\nNår vi lager en lignende figur for å undersøke spesifikt de som var utenfor i 2018 så ser vi at en betydelig andel av disse (47 %) blir klassifisert som innenfor i 2023. Mens ca 40 % av de er fortsatt klassifisert som utenfor i 2023.\n\n\n\nSankey diagram som følger de som var utenfor i 2018 frem til 2023."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Om",
-    "section": "",
-    "text": "Det er Lars Bauger som har lagd sidene. Kontaktinfo: lars.bauger@usn.no"
-  },
-  {
     "objectID": "konferanse.html",
     "href": "konferanse.html",
     "title": "Konferansebidrag",
@@ -40,6 +19,41 @@
     "title": "Konferansebidrag",
     "section": "Poster – Harstad 2026",
     "text": "Poster – Harstad 2026\nTitle: Pathways Out of NEET: Profiling Young Adults Using Registry Data\nThe 11th Nordic Health Promotion Research Conference, Harstad, Norway 10.06.2026-12.06.2026"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Om",
+    "section": "",
+    "text": "Det er Lars Bauger som har lagd sidene. Kontaktinfo: lars.bauger@usn.no"
+  },
+  {
+    "objectID": "sankey.html",
+    "href": "sankey.html",
+    "title": "Utvikling over tid - begynnende analyse av registerdata",
+    "section": "",
+    "text": "Her har vi tatt utgangspunkt i personer fra Buskerud, Vestfold og Telemark som var mellom 21 og 25 år i 2018 og fulgt deres innenfor/utenfor status i henhold til NEET klassifiseringen. Dataene som benyttes her kommer fra microdata.no som er en tjeneste som gir tilgang til registerdata uten å søke til forskningsinstitusjoner. Microdata gir tilgang til et bredt utvalg av registerdata. For å beregne NEET status eller innenfor/utenforsskap har vi benyttet flere registerdata i kombinasjon. I dette arbeidet av Jon Olav Sliper (Unge Trøndere Utenfor Arbeid, Utdanning Og Arbeidsmarkedstiltak i 2023 | Trøndelag i Tall, n.d.; JOSliper, n.d.) sitt arbeid i Trøndelag fylkeskommune vært sentralt .\nBasert på dette og manualen som finnes på microdata.no beregnet vi hvert år hvorvidt de har en tilknytning til arbeidslivet/utdanning/arbeidsmarkedstiltak. Nedenfor har vi valgt å bruke begrepet innenfor og utenfor som begrep for non-NEET og NEET. Dette er rett og slett fordi vi opplever at det fungerer bedre når vi skal snakke om bevegelse inn og ut av en slik kategorisering/klassifisering. I klassifiseringen innenfor/utenfor nedenfor, har vi kategorisert personer innenfor dersom de var tilknyttet en eller flere av disse kategoriene i det respektive året. Registervariablene som ble benyttet er beskrevet i tabbelen i tabellen under."
+  },
+  {
+    "objectID": "sankey.html#utvikling-over-tid",
+    "href": "sankey.html#utvikling-over-tid",
+    "title": "Utvikling over tid - begynnende analyse av registerdata",
+    "section": "Utvikling over tid",
+    "text": "Utvikling over tid\nUnder er et flytdiagram (et såkalt Sankey diagram) som viser hvordan statusen utvikler seg over disse fem årene. i 2018 er det 12,4 % av de mellom 21-25 som klassifiseres som utenfor, mens dette tallet er sunket noe i 2023, hvor 11,6 % ble klassifisert som utenfor.\n\n\nUtvikling blant de som var utenfor i 2018\nNår vi lager en lignende figur for å undersøke spesifikt de som var utenfor i 2018 så ser vi at en betydelig andel av disse (47 %) blir klassifisert som innenfor i 2023. Mens ca 40 % av de er fortsatt klassifisert som utenfor i 2023.\n\n\n\nSankey diagram som følger de som var utenfor i 2018 frem til 2023."
+  },
+  {
+    "objectID": "Ressurser.html",
+    "href": "Ressurser.html",
+    "title": "Ressurser",
+    "section": "",
+    "text": "Tre episoder av Sosialpodden ved Universitetet i Sørøst-Norge er relevante for SOBRU-prosjektets temaer.\n\n\n30. oktober 2025\nHvordan oppleves utenforskap, og hvor kan man finne tilhørighet? Erwan og Marie fra ungdomspanelet i SOBRU deltar sammen med forskere Vibeke og Knut Tore fra USN.\n\n\n\n\n25. september 2025\nFrivillighet handler om fellesskap, deltakelse og identitet. Episoden utforsker hva som motiverer folk til å engasjere seg, og hvem som får – og ikke får – plass i frivilligheten.\n\n\n\n\n25. september 2025\nGolf som arena for mestring og sosial inkludering – det er utgangspunktet for prosjektet «Et slag av gangen». Episoden handler om frivillighet, engasjement og møtet med mennesker i sårbare livssituasjoner."
+  },
+  {
+    "objectID": "Ressurser.html#podkast",
+    "href": "Ressurser.html#podkast",
+    "title": "Ressurser",
+    "section": "",
+    "text": "Tre episoder av Sosialpodden ved Universitetet i Sørøst-Norge er relevante for SOBRU-prosjektets temaer.\n\n\n30. oktober 2025\nHvordan oppleves utenforskap, og hvor kan man finne tilhørighet? Erwan og Marie fra ungdomspanelet i SOBRU deltar sammen med forskere Vibeke og Knut Tore fra USN.\n\n\n\n\n25. september 2025\nFrivillighet handler om fellesskap, deltakelse og identitet. Episoden utforsker hva som motiverer folk til å engasjere seg, og hvem som får – og ikke får – plass i frivilligheten.\n\n\n\n\n25. september 2025\nGolf som arena for mestring og sosial inkludering – det er utgangspunktet for prosjektet «Et slag av gangen». Episoden handler om frivillighet, engasjement og møtet med mennesker i sårbare livssituasjoner."
   },
   {
     "objectID": "index.html",
