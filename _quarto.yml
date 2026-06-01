@@ -31,7 +31,7 @@ website:
       - href: ressurser.qmd
         text: Ressurser
       - href: europa_neet.qmd
-        text: Internasjonal sammenligning
+        text: Internasjonale tall
 
 format:
   html:
