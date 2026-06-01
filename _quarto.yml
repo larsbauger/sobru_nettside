@@ -28,7 +28,7 @@ website:
         text: Flytskjema
       - href: konferanse.qmd
         text: Konferansebidrag
-      - href: ressurser.qmd
+      - href: Ressurser.qmd
         text: Ressurser
        
 
