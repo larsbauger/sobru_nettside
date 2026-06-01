@@ -82,7 +82,7 @@ neet_kv <- get_eurostat(
 siste_kv <- max(neet_kv$tid)
 ```
 
-## Langsiktig utvikling — årstall
+## Langsiktig utvikling 
 
 Norge ligger konsistent blant landene med lavest NEET-andel i Europa. De nordiske landene ligger samlet godt under EU-snittet, mens Italia har opplevd vedvarende og svært høye andeler — over 20 prosent gjennom store deler av 2010-tallet.
 
