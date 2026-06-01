@@ -46,10 +46,11 @@ jobs:
           install.packages(c(
             "tidyverse", "ggplot2", "plotly", "leaflet",
             "leaflet.extras", "leaflet.extras2", "leafem",
-            "mapview", "sf", "giscoR", "csmaps",
+            "mapview", "leafpop", "sf", "giscoR", "csmaps",
             "reactable", "gt", "ggiraph", "crosstalk",
             "PxWebApiData", "janitor", "here", "eurostat",
-            "bslib", "htmlwidgets", "shiny"
+            "bslib", "htmlwidgets", "shiny", "httr2",
+            "hrbrthemes", "viridis", "scales", "RColorBrewer"
           ))
         shell: Rscript {0}
 
