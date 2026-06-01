@@ -1,39 +1,36 @@
-
 ---
 title: "Ressurser"
 ---
 
 ## Podkast
 
-Tre episoder av **[Sosialpodden](https://www.usn.no/podkast/podkaster/sosialpodden)** 
-ved Universitetet i Sørøst-Norge er relevante for SOBRU-prosjektets temaer.
+Tre episoder av [**Sosialpodden**](https://www.usn.no/podkast/podkaster/sosialpodden) ved Universitetet i Sørøst-Norge er relevante for SOBRU-prosjektets temaer.
 
 ### Hvor kan man finne tilhørighet når man opplever utenforskap?
+
 *30. oktober 2025*
 
-Hvordan oppleves utenforskap, og hvor kan man finne tilhørighet? Erwan og Marie fra 
-ungdomspanelet i SOBRU deltar sammen med forskere Vibeke og Knut Tore fra USN.
+Hvordan oppleves utenforskap, og hvor kan man finne tilhørighet? Erwan og Marie fra ungdomspanelet i SOBRU deltar sammen med forskere Vibeke og Knut Tore fra USN.
 
 ```{=html}
 <iframe width="100%" height="180" frameborder="no" scrolling="no" seamless src="https://share.transistor.fm/e/c2907792"></iframe>
 ```
 
 ### Frivillighet er mer enn dugnad og kaffekoking
+
 *25. september 2025*
 
-Frivillighet handler om fellesskap, deltakelse og identitet. Episoden utforsker hva som 
-motiverer folk til å engasjere seg, og hvem som får – og ikke får – plass i frivilligheten.
+Frivillighet handler om fellesskap, deltakelse og identitet. Episoden utforsker hva som motiverer folk til å engasjere seg, og hvem som får – og ikke får – plass i frivilligheten.
 
 ```{=html}
 <iframe width="100%" height="180" frameborder="no" scrolling="no" seamless src="https://share.transistor.fm/e/ee544b8f"></iframe>
 ```
 
 ### Et slag av gangen – når golf blir sosialt arbeid
+
 *25. september 2025*
 
-Golf som arena for mestring og sosial inkludering – det er utgangspunktet for prosjektet 
-«Et slag av gangen». Episoden handler om frivillighet, engasjement og møtet med mennesker 
-i sårbare livssituasjoner.
+Golf som arena for mestring og sosial inkludering – det er utgangspunktet for prosjektet «Et slag av gangen». Episoden handler om frivillighet, engasjement og møtet med mennesker i sårbare livssituasjoner.
 
 ```{=html}
 <iframe width="100%" height="180" frameborder="no" scrolling="no" seamless src="https://share.transistor.fm/e/5941aa86"></iframe>
