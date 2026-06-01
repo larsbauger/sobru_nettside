@@ -1,5 +1,40 @@
 [
   {
+    "objectID": "ressurser.html",
+    "href": "ressurser.html",
+    "title": "Ressurser",
+    "section": "",
+    "text": "Tre episoder av Sosialpodden ved Universitetet i Sørøst-Norge er relevante for SOBRU-prosjektets temaer.\n\n\n30. oktober 2025\nHvordan oppleves utenforskap, og hvor kan man finne tilhørighet? Erwan og Marie fra ungdomspanelet i SOBRU deltar sammen med forskere Vibeke og Knut Tore fra USN.\n\n\n\n\n25. september 2025\nFrivillighet handler om fellesskap, deltakelse og identitet. Episoden utforsker hva som motiverer folk til å engasjere seg, og hvem som får – og ikke får – plass i frivilligheten.\n\n\n\n\n25. september 2025\nGolf som arena for mestring og sosial inkludering – det er utgangspunktet for prosjektet «Et slag av gangen». Episoden handler om frivillighet, engasjement og møtet med mennesker i sårbare livssituasjoner."
+  },
+  {
+    "objectID": "ressurser.html#podkast",
+    "href": "ressurser.html#podkast",
+    "title": "Ressurser",
+    "section": "",
+    "text": "Tre episoder av Sosialpodden ved Universitetet i Sørøst-Norge er relevante for SOBRU-prosjektets temaer.\n\n\n30. oktober 2025\nHvordan oppleves utenforskap, og hvor kan man finne tilhørighet? Erwan og Marie fra ungdomspanelet i SOBRU deltar sammen med forskere Vibeke og Knut Tore fra USN.\n\n\n\n\n25. september 2025\nFrivillighet handler om fellesskap, deltakelse og identitet. Episoden utforsker hva som motiverer folk til å engasjere seg, og hvem som får – og ikke får – plass i frivilligheten.\n\n\n\n\n25. september 2025\nGolf som arena for mestring og sosial inkludering – det er utgangspunktet for prosjektet «Et slag av gangen». Episoden handler om frivillighet, engasjement og møtet med mennesker i sårbare livssituasjoner."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sosial bærekraft og redusert utenforsskap (SOBRU)",
+    "section": "",
+    "text": "Dette er en nettside som utvikles for å finne gode måter å formidle arbeidet som gjøres i de forskjellige arbeidspakkene. Man kan navigere til de forskjellige sidene med informasjon ved å trykke på fanene på toppen av siden. Foreløpig er det informasjon og resultater fra arbeidspakke 1 som er her, men dette kan utvikle seg over tid.\n\n\nEn oversikt over hvor mange som kategoriseres som NEET i vår region fordelt på fylkene og kommuner kan man finne på fanen over som heter NEET i vår region. For å illustrere forskjeller og likheter mellom kommunene så har vi også illustrert dette i flere forskjellige kart. Under fanen Kart vil man få opp to forskjellige kart som illustrerer andel NEET blant alle unge (15-29 år) og andel NEET blant personer med innvandringsbakgrunn. Under fanen Interaktivt kart med shiny vil det også være mulig å filtrere dataene på kommune, kjønn og alder. Vi har også laget en illustrasjon over hvordan andelen NEET har utviklet seg i perioden 2008-2024, og denne figuren finnes under fanen Utvikling over tid. En del av prosjektet vil også gjøre dypdykk i enkelte fødselsår og følge de over en lengre periode, for å identifisere hvor mange som er langvarig NEET og hvor mange som kommer seg ut av den kategorien. Noen tidlige funn og illustrasjoner av dette arbeidet kan finnes under fanen Flytskjema. Resultater fra prosjektet presenteres også på forskjellige konferanser nasjonalt og Internasjonalt. Presentasjoner fra slike konferanser finner du under fanen konferansebidrag.\n\n\n\nI dette arbeidet benyttes statistikk fra Statistisk Sentralbyrå (SSB) med tabell 13556 (SSB 2025a) og tabell 135563 (SSB 2025b) som sentrale datakilder. Her har vi benyttet SSB sin api-løsning PxWebApi (Langsrud et al. 2025) og statistikkprogrammet R (R Core Team 2023).\nMer informasjon om prosjektet i sin helhet kan man finne på SOBRU sin USN side."
+  },
+  {
+    "objectID": "index.html#beskrivelse-av-innhold-på-siden",
+    "href": "index.html#beskrivelse-av-innhold-på-siden",
+    "title": "Sosial bærekraft og redusert utenforsskap (SOBRU)",
+    "section": "",
+    "text": "En oversikt over hvor mange som kategoriseres som NEET i vår region fordelt på fylkene og kommuner kan man finne på fanen over som heter NEET i vår region. For å illustrere forskjeller og likheter mellom kommunene så har vi også illustrert dette i flere forskjellige kart. Under fanen Kart vil man få opp to forskjellige kart som illustrerer andel NEET blant alle unge (15-29 år) og andel NEET blant personer med innvandringsbakgrunn. Under fanen Interaktivt kart med shiny vil det også være mulig å filtrere dataene på kommune, kjønn og alder. Vi har også laget en illustrasjon over hvordan andelen NEET har utviklet seg i perioden 2008-2024, og denne figuren finnes under fanen Utvikling over tid. En del av prosjektet vil også gjøre dypdykk i enkelte fødselsår og følge de over en lengre periode, for å identifisere hvor mange som er langvarig NEET og hvor mange som kommer seg ut av den kategorien. Noen tidlige funn og illustrasjoner av dette arbeidet kan finnes under fanen Flytskjema. Resultater fra prosjektet presenteres også på forskjellige konferanser nasjonalt og Internasjonalt. Presentasjoner fra slike konferanser finner du under fanen konferansebidrag."
+  },
+  {
+    "objectID": "index.html#datakilder",
+    "href": "index.html#datakilder",
+    "title": "Sosial bærekraft og redusert utenforsskap (SOBRU)",
+    "section": "",
+    "text": "I dette arbeidet benyttes statistikk fra Statistisk Sentralbyrå (SSB) med tabell 13556 (SSB 2025a) og tabell 135563 (SSB 2025b) som sentrale datakilder. Her har vi benyttet SSB sin api-løsning PxWebApi (Langsrud et al. 2025) og statistikkprogrammet R (R Core Team 2023).\nMer informasjon om prosjektet i sin helhet kan man finne på SOBRU sin USN side."
+  },
+  {
     "objectID": "konferanse.html",
     "href": "konferanse.html",
     "title": "Konferansebidrag",
@@ -40,40 +75,5 @@
     "title": "Utvikling over tid - begynnende analyse av registerdata",
     "section": "Utvikling over tid",
     "text": "Utvikling over tid\nUnder er et flytdiagram (et såkalt Sankey diagram) som viser hvordan statusen utvikler seg over disse fem årene. i 2018 er det 12,4 % av de mellom 21-25 som klassifiseres som utenfor, mens dette tallet er sunket noe i 2023, hvor 11,6 % ble klassifisert som utenfor.\n\n\nUtvikling blant de som var utenfor i 2018\nNår vi lager en lignende figur for å undersøke spesifikt de som var utenfor i 2018 så ser vi at en betydelig andel av disse (47 %) blir klassifisert som innenfor i 2023. Mens ca 40 % av de er fortsatt klassifisert som utenfor i 2023.\n\n\n\nSankey diagram som følger de som var utenfor i 2018 frem til 2023."
-  },
-  {
-    "objectID": "Ressurser.html",
-    "href": "Ressurser.html",
-    "title": "Ressurser",
-    "section": "",
-    "text": "Tre episoder av Sosialpodden ved Universitetet i Sørøst-Norge er relevante for SOBRU-prosjektets temaer.\n\n\n30. oktober 2025\nHvordan oppleves utenforskap, og hvor kan man finne tilhørighet? Erwan og Marie fra ungdomspanelet i SOBRU deltar sammen med forskere Vibeke og Knut Tore fra USN.\n\n\n\n\n25. september 2025\nFrivillighet handler om fellesskap, deltakelse og identitet. Episoden utforsker hva som motiverer folk til å engasjere seg, og hvem som får – og ikke får – plass i frivilligheten.\n\n\n\n\n25. september 2025\nGolf som arena for mestring og sosial inkludering – det er utgangspunktet for prosjektet «Et slag av gangen». Episoden handler om frivillighet, engasjement og møtet med mennesker i sårbare livssituasjoner."
-  },
-  {
-    "objectID": "Ressurser.html#podkast",
-    "href": "Ressurser.html#podkast",
-    "title": "Ressurser",
-    "section": "",
-    "text": "Tre episoder av Sosialpodden ved Universitetet i Sørøst-Norge er relevante for SOBRU-prosjektets temaer.\n\n\n30. oktober 2025\nHvordan oppleves utenforskap, og hvor kan man finne tilhørighet? Erwan og Marie fra ungdomspanelet i SOBRU deltar sammen med forskere Vibeke og Knut Tore fra USN.\n\n\n\n\n25. september 2025\nFrivillighet handler om fellesskap, deltakelse og identitet. Episoden utforsker hva som motiverer folk til å engasjere seg, og hvem som får – og ikke får – plass i frivilligheten.\n\n\n\n\n25. september 2025\nGolf som arena for mestring og sosial inkludering – det er utgangspunktet for prosjektet «Et slag av gangen». Episoden handler om frivillighet, engasjement og møtet med mennesker i sårbare livssituasjoner."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Sosial bærekraft og redusert utenforsskap (SOBRU)",
-    "section": "",
-    "text": "Dette er en nettside som utvikles for å finne gode måter å formidle arbeidet som gjøres i de forskjellige arbeidspakkene. Man kan navigere til de forskjellige sidene med informasjon ved å trykke på fanene på toppen av siden. Foreløpig er det informasjon og resultater fra arbeidspakke 1 som er her, men dette kan utvikle seg over tid.\n\n\nEn oversikt over hvor mange som kategoriseres som NEET i vår region fordelt på fylkene og kommuner kan man finne på fanen over som heter NEET i vår region. For å illustrere forskjeller og likheter mellom kommunene så har vi også illustrert dette i flere forskjellige kart. Under fanen Kart vil man få opp to forskjellige kart som illustrerer andel NEET blant alle unge (15-29 år) og andel NEET blant personer med innvandringsbakgrunn. Under fanen Interaktivt kart med shiny vil det også være mulig å filtrere dataene på kommune, kjønn og alder. Vi har også laget en illustrasjon over hvordan andelen NEET har utviklet seg i perioden 2008-2024, og denne figuren finnes under fanen Utvikling over tid. En del av prosjektet vil også gjøre dypdykk i enkelte fødselsår og følge de over en lengre periode, for å identifisere hvor mange som er langvarig NEET og hvor mange som kommer seg ut av den kategorien. Noen tidlige funn og illustrasjoner av dette arbeidet kan finnes under fanen Flytskjema. Resultater fra prosjektet presenteres også på forskjellige konferanser nasjonalt og Internasjonalt. Presentasjoner fra slike konferanser finner du under fanen konferansebidrag.\n\n\n\nI dette arbeidet benyttes statistikk fra Statistisk Sentralbyrå (SSB) med tabell 13556 (SSB 2025a) og tabell 135563 (SSB 2025b) som sentrale datakilder. Her har vi benyttet SSB sin api-løsning PxWebApi (Langsrud et al. 2025) og statistikkprogrammet R (R Core Team 2023).\nMer informasjon om prosjektet i sin helhet kan man finne på SOBRU sin USN side."
-  },
-  {
-    "objectID": "index.html#beskrivelse-av-innhold-på-siden",
-    "href": "index.html#beskrivelse-av-innhold-på-siden",
-    "title": "Sosial bærekraft og redusert utenforsskap (SOBRU)",
-    "section": "",
-    "text": "En oversikt over hvor mange som kategoriseres som NEET i vår region fordelt på fylkene og kommuner kan man finne på fanen over som heter NEET i vår region. For å illustrere forskjeller og likheter mellom kommunene så har vi også illustrert dette i flere forskjellige kart. Under fanen Kart vil man få opp to forskjellige kart som illustrerer andel NEET blant alle unge (15-29 år) og andel NEET blant personer med innvandringsbakgrunn. Under fanen Interaktivt kart med shiny vil det også være mulig å filtrere dataene på kommune, kjønn og alder. Vi har også laget en illustrasjon over hvordan andelen NEET har utviklet seg i perioden 2008-2024, og denne figuren finnes under fanen Utvikling over tid. En del av prosjektet vil også gjøre dypdykk i enkelte fødselsår og følge de over en lengre periode, for å identifisere hvor mange som er langvarig NEET og hvor mange som kommer seg ut av den kategorien. Noen tidlige funn og illustrasjoner av dette arbeidet kan finnes under fanen Flytskjema. Resultater fra prosjektet presenteres også på forskjellige konferanser nasjonalt og Internasjonalt. Presentasjoner fra slike konferanser finner du under fanen konferansebidrag."
-  },
-  {
-    "objectID": "index.html#datakilder",
-    "href": "index.html#datakilder",
-    "title": "Sosial bærekraft og redusert utenforsskap (SOBRU)",
-    "section": "",
-    "text": "I dette arbeidet benyttes statistikk fra Statistisk Sentralbyrå (SSB) med tabell 13556 (SSB 2025a) og tabell 135563 (SSB 2025b) som sentrale datakilder. Her har vi benyttet SSB sin api-løsning PxWebApi (Langsrud et al. 2025) og statistikkprogrammet R (R Core Team 2023).\nMer informasjon om prosjektet i sin helhet kan man finne på SOBRU sin USN side."
   }
 ]
